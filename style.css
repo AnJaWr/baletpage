@@ -62,11 +62,11 @@ a{
 }
 
 #home{
-  background-image: url(../img/bg2.jpg);
+  background-image: url(../baletpage/img/bg2.jpg);
 }
 
 #about{
-  background-image: url(../img/bg1.jpg);
+  background-image: url(../baletpage/img/bg1.jpg);
 }
 .logo_container{
   width: 100vh;
@@ -77,7 +77,7 @@ a{
 .logo {
     width: 170px;
     height: 70px;
-    background-image: url(../img/alisof.png);
+    background-image: url(../baletpage/img/alisof.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -158,9 +158,9 @@ height: 20%;
   text-decoration: none;
 margin:25px auto}
 
-.img1{background-image: url(../img/bg_kids.jpg);  background-size: cover; background-position: bottom;
+.img1{background-image: url(../baletpage/img/bg_kids.jpg);  background-size: cover; background-position: bottom;
   background-repeat: no-repeat;}
-.img2{background-image: url(..img/bg2.jpg);  background-size: cover; background-position: bottom;
+.img2{background-image: url(../baletpage/img/bg2.jpg);  background-size: cover; background-position: bottom;
   background-repeat: no-repeat;}
 .button_container{
   width: 100%;
@@ -207,7 +207,7 @@ margin:25px auto}
 }
 
 .member_photo-img{ 
-  background-image: url(../img/zdjęcia-ALINA-Balet-760x760.jpg);
+  background-image: url(../baletpage/img/zdjęcia-ALINA-Balet-760x760.jpg);
   border-radius: 50%;
     background-repeat: no-repeat;
   background-size: cover;
