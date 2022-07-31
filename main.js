@@ -11,10 +11,13 @@ window.addEventListener('load', function () {
 
 const kadra_btn = document.getElementById("kadra_btn");
 // const links = document.querySelectorAll(".page-header ul a");
+const kids_btn= document.getElementById("kids_btn");
+const adult_btn= document.getElementById("adult_btn");
 
 
 kadra_btn.addEventListener("click", clickHandler);
-
+adult_btn.addEventListener("click", clickHandler);
+kids_btn.addEventListener("click", clickHandler);
 
 function clickHandler(e) {
   e.preventDefault();

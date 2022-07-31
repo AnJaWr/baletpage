@@ -14,7 +14,9 @@ a{
   text-decoration: none;
   color: inherit;
 }
-
+section{
+  position: relative;
+}
 .preloader {
     display: flex;
     justify-content: center;
@@ -41,6 +43,7 @@ a{
   display:flex;
   flex-wrap: wrap;
   width: 100%;
+  min-height: fit-content;
 
 }
   
@@ -59,14 +62,17 @@ a{
  display: flex;
  flex-wrap: wrap;
 
+
 }
 
 #home{
   background-image: url(../baletpage/img/bg2.jpg);
+  /* background-image: url(/img/bg2.jpg); */
 }
 
 #about{
   background-image: url(../baletpage/img/bg1.jpg);
+  /* background-image: url(/img/bg1.jpg); */
 }
 .logo_container{
   width: 100vh;
@@ -78,6 +84,7 @@ a{
     width: 170px;
     height: 70px;
     background-image: url(../baletpage/img/alisof.png);
+    /* background-image: url(/img/alisof.png); */
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -126,6 +133,11 @@ h1{
   padding-right: 15px;
   text-align: center;
 }
+
+h3, h2{
+  font-family: 'Ibarra Real Nova', serif;
+  padding-bottom:7px
+}
 /* #zajecia{
   background-color: #f5f0f0;
 } */
@@ -158,9 +170,13 @@ height: 20%;
   text-decoration: none;
 margin:25px auto}
 
-.img1{background-image: url(../baletpage/img/bg_kids.jpg);  background-size: cover; background-position: bottom;
+.img1{background-image: url(../baletpage/img/bg_kids.jpg); 
+  /* background-image: url(/img/bg_kids.jpg); */
+   background-size: cover; background-position: bottom;
   background-repeat: no-repeat;}
-.img2{background-image: url(../baletpage/img/bg2.jpg);  background-size: cover; background-position: bottom;
+.img2{background-image: url(../baletpage/img/bg_adult.jpg); 
+  /* background-image: url(/img/bg_adult.jpg); */
+   background-size: cover; background-position: bottom;
   background-repeat: no-repeat;}
 .button_container{
   width: 100%;
@@ -168,9 +184,17 @@ margin:25px auto}
   justify-content: center;
 }
 .button {
+  /* width: 33%; */
+  /* text-align: center; */
+  display:inline;
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
   width: 33%;
   text-align: center;
-  /* display:inline; */
+  /* padding: 7px; */
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
 }
 
 .col {
@@ -180,6 +204,7 @@ margin:25px auto}
 .colTitle{
   /* transform: rotate(-10deg); */
   padding:20px;
+  color: lightgray;
 }
 #kadra{
   background-color: #f5e1e1;
@@ -208,6 +233,7 @@ margin:25px auto}
 
 .member_photo-img{ 
   background-image: url(../baletpage/img/zdjęcia-ALINA-Balet-760x760.jpg);
+  /* background-image: url(/img/zdjęcia-ALINA-Balet-760x760.jpg); */
   border-radius: 50%;
     background-repeat: no-repeat;
   background-size: cover;
@@ -245,4 +271,50 @@ height: 25%;
   display: inline-block; 
   width: 1em;
   margin-left: -1em;
+}
+
+/*section kids */
+.block{
+  margin: 5px 10px;
+  font-size: 0.9em;
+  text-align: justify;
+  padding: 8px;
+}
+
+.block-d{
+  padding-bottom: 10px;
+}
+
+.kids_one, .adult_one{
+  background-color: #f1e2e2;
+}
+.kids_two, .adult_two{
+  background-color: #f3cccc;
+}
+.kids_three, .adult_three{
+  background-color: #f3bbbb;
+}
+.kids_img{
+  background-image: url(../baletpage/img/4S7A3742.jpg);
+   /* background-image: url(/img/4S7A3742.jpg); */
+ 
+  width: 100%;
+  height: 25%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main_container_longer{
+width: 100%;
+min-height: fit-content;
+display: block;
+
+}
+.nolist{
+  list-style: none;
+}
+
+#adult{
+  background-color: #ebebeb;
 }
