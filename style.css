@@ -170,13 +170,16 @@ height: 20%;
   text-decoration: none;
 margin:25px auto}
 
-.img1{background-image: url(../baletpage/img/bg_kids.jpg); 
-  /* background-image: url(/img/bg_kids.jpg); */
+.img1{
+  background-image: url(../baletpage/img/bg_kids.jpg);
+   /* background-image: url(/img/bg_kids.jpg);  */
    background-size: cover; background-position: bottom;
   background-repeat: no-repeat;}
-.img2{background-image: url(../baletpage/img/bg_adult.jpg); 
-  /* background-image: url(/img/bg_adult.jpg); */
-   background-size: cover; background-position: bottom;
+.img2{
+  background-image: url(../baletpage/img/bg_adult.jpg); 
+  /* background-image: url(/img/bg_adult.jpg);  */
+  background-size: cover; 
+  background-position: bottom;
   background-repeat: no-repeat;}
 .button_container{
   width: 100%;
