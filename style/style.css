@@ -606,11 +606,11 @@ margin-bottom: 50px;
 
    .ballerina_2{
     background-image: url(../img/IMG_1387_Original.jpeg);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;
-    height: 80%;
+    min-height: 90%;
     margin-top: 45px;
     margin-left:25px;
     padding:10px;
