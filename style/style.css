@@ -7,6 +7,7 @@ html,
 body{
   font-family: 'Cormorant Garamond', serif;
   background-color: #f5f0f0;
+  color:rgb(31, 29, 29);
  
    width: 100%;
    /* height: 100%; */
@@ -37,6 +38,9 @@ a{
     background-color: #f5f0f0;
     transition: opacity 400ms ease-in-out, visibility 0s 400ms;
     
+  }
+  .preloader img{
+    width: 80vw;
   }
   
   .show-preloader {
@@ -106,7 +110,7 @@ padding-top:55px;
 .logo {
     width: 170px;
     height: 70px;
-    background-image: url(../img/alisof.png);
+    background-image: url(../img/alisof_lighter.png);
     /* background-image: url(/img/alisof.png); */
     background-size: contain;
     background-repeat: no-repeat;
@@ -135,8 +139,6 @@ padding-top:55px;
 .menu li{
     display: inline;
     text-decoration: none;
-    padding:10px;
-
     text-transform:uppercase;
     justify-self: center;
     font-family: 'Ibarra Real Nova', serif;}
@@ -276,16 +278,13 @@ margin:25px auto}
 
 .anna{
   background-image: url(../img/avatar.jpg);
-  /* background-image: url(/img/avatar.jpg); */
 }
 
 .alina{
   background-image: url(../img/zdjęcia-ALINA-Balet-760x760.jpg);
-  /* background-image: url(/img/zdjęcia-ALINA-Balet-760x760.jpg); */
 }
 .dasha{
   background-image: url(../img/dasha.jpg);
-  /* background-image: url(/img/dasha.jpg); */
 }
 .member_container{
 min-height: 50vh; 
@@ -385,7 +384,6 @@ min-width: 45vw;
 }
 .littlebalerina_1{
   background-image: url(../img/4S7A3742.jpg);
-   /* background-image: url(/img/4S7A3742.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -400,7 +398,7 @@ min-width: 45vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 80%;
+  width: 100vw;
   min-height: 70vh;
 margin:5px;
   padding:10px;
@@ -415,9 +413,6 @@ flex-wrap: wrap;
 
 
 }
-/* .kids-d{
-  margin-bottom:45px;
-} */
 .nolist{
   list-style: none;
   font-size:1.1rem;
@@ -459,12 +454,11 @@ h5{
   padding:5px;
 }
 .ballerina_stretching-mobile{
-  /* background-image: url(/img/4S7A1830.jpg); */
   background-image: url(../img/stretching.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 80vw;
+  width: 100vw;
 min-height: 70vh;
 margin:5px;
   padding:10px;
@@ -475,7 +469,7 @@ margin:5px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 80%;
+  width: 100vw;
 min-height: 70vh;
 margin:15px 5px;
 padding:10px;
@@ -487,13 +481,185 @@ padding:10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 80%;
+  width: 100vw;
 min-height: 70vh;
 margin:15px 5px;
 padding:10px;
 
  }
+/* ==========================kontakt ========= */
 
+#contact {
+  background-image: url(../img/bg1_hor.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-box {
+  width: clamp(100px, 90%, 1000px);
+  margin: 80px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+
+.contact-links {
+  background-color: #f3b3b3;
+  border-radius: 10px 0 0 10px;
+}
+.contact-links h2{
+text-align: center;
+}
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+
+.infobox-wrapper{
+margin-top:20px;
+}
+
+.adress_info a {
+padding-top:20px;
+}
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+} 
+
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin:10px;
+  /* color:rgb(231, 120, 120); */
+}
+
+
+
+.form-item {
+  position: relative;
+}
+
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #fd917e;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+ 
+
+.infobox-wrapper{
+width: 100%;
+font-size: clamp(24px, 1vw, 24px);
+}
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(18px, 8vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(18px, 8vw, 60px);
+  }
+  
+  .links {
+    padding-top: 30px;
+  }
+/*   
+  img {
+    width: 38px;
+    height: 38px;
+  } */
+} 
+
+/* ========================media rules ======================= */
  
 /* @media (min-width: 1024px){
   
@@ -501,6 +667,9 @@ padding:10px;
 
  */
 @media (min-width: 768px){
+  .preloader img{
+    width: 30vw;
+  }
 p{
   font-size: 1.3rem;
 }
@@ -657,6 +826,11 @@ margin-bottom: 50px;
    .block{
     width: 30%;
    }
+
+   .link-envelop{
+    width: 35px;
+    height: 35px;
+  }
 }
 
 
