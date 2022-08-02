@@ -471,7 +471,6 @@ margin:5px;
  }
 
  .ballerina_1-mobile{
-  /* background-image: url(/img/4S7A1830.jpg); */
   background-image: url(../img/4S7A1830.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -482,6 +481,20 @@ margin:15px 5px;
 padding:10px;
 
  }
+
+ .ballerina_2-mobile{
+  background-image: url(../img/IMG_1387_Original.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+min-height: 70vh;
+margin:15px 5px;
+padding:10px;
+
+ }
+
+ 
 /* @media (min-width: 1024px){
   
 }
@@ -493,7 +506,6 @@ p{
 }
     #home{
       background-image: url(../img/4S7A4967.jpg);
-      /* background-image: url(/img/4S7A4967.jpg); */
       background-position: 45%;
     
   }
@@ -580,7 +592,6 @@ margin-bottom: 50px;
 }
 
    .ballerina_1{
-    /* background-image: url(/img/4S7A1830.jpg); */
     background-image: url(../img/4S7A1830.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -593,9 +604,20 @@ margin-bottom: 50px;
     box-shadow: 5px 0px 5px rgb(0 0 0 / 40%);
    }
 
+   .ballerina_2{
+    background-image: url(../img/IMG_1387_Original.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35%;
+    height: 80%;
+    margin-top: 45px;
+    margin-left:25px;
+    padding:10px;
+    box-shadow: 5px 0px 5px rgb(0 0 0 / 40%);
+   }
 
    .ballerina_stretching{
-    /* background-image: url(/img/4S7A1830.jpg); */
     background-image: url(../img/stretching.jpg);
     background-position: center;
     background-repeat: no-repeat;
