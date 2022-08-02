@@ -609,10 +609,11 @@ margin-bottom: 50px;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 35%;
-    min-height: 90%;
+    width: 30%;
+    min-height: 80vh;
     margin-top: 45px;
     margin-left:25px;
+    margin-bottom: 50px;
     padding:10px;
     box-shadow: 5px 0px 5px rgb(0 0 0 / 40%);
    }
@@ -622,9 +623,11 @@ margin-bottom: 50px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 45%;
+    width: 30%;
+    min-height: 80vh;;
     margin-top: 45px;
     margin-left:25px;
+    margin-bottom: 50px;
     padding:10px;
     box-shadow: 5px 0px 5px rgb(0 0 0 / 40%);
    }
