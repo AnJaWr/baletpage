@@ -105,6 +105,8 @@ figure {
 #about {
     background-image: url(../img/bg1.jpg);
     /* background-image: url(/img/bg1.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .logo_container {
@@ -527,7 +529,7 @@ h5 {
 /* ==========================kontakt ========= */
 
 #contact {
-    background-image: url(../img/bg1_hor.jpg);
+    background-image: url(../img/bg1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
