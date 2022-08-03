@@ -695,8 +695,18 @@ textarea:valid+label {
   } */
 }
 
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+    height: 6vh;
+    display: flex;
+    justify-content: flex-end;
+}
 
-/* ========================media rules ======================= */
+
+/* =========================================== mediaQ rules ================================= */
 
 @media (min-width: 768px) {
     .preloader img {
