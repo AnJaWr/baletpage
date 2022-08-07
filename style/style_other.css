@@ -107,6 +107,7 @@ table {
 }
 
 th,
+tr,
 td {
     text-align: center;
     border: 1px solid #ddd;
