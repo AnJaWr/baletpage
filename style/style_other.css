@@ -1,0 +1,167 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 0.9em;
+    background-color: #f5f0f0;
+}
+
+#grafik,
+#cennik {
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.grafik_kids.block-d,
+.grafik_adults.block-d {
+    width: 100%;
+    margin: 5px
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+}
+
+.grafik_opcje {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* min-height: fit-content; */
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile_visible {
+    display: flex;
+}
+
+.screen_visible {
+    display: none;
+}
+
+.main {
+    margin: 15px;
+}
+
+h2 {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+.block {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.table_container {
+    margin-top: 20px;
+    width: 65%;
+}
+
+.block-d {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+    border: 1px solid rgba(255, 255, 255, 0.59);
+    padding: 10px;
+    margin: 20px 10px;
+}
+
+img {
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    margin-left: 5px;
+    align-self: flex-end
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th,
+t {
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+
+/* td {
+    opacity: 0;
+} */
+
+.show {
+    display: table-cell;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    .wrapper {
+        justify-content: space-around;
+        min-height: fit-content;
+    }
+    .block {
+        width: 35%;
+    }
+    .grafik_opcje {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .grafik_kids.block-d,
+    .grafik_adults.block-d {
+        width: 38%;
+        margin: 25px
+    }
+    .mobile_visible {
+        display: none;
+    }
+    .screen_visible {
+        display: flex;
+    }
+}

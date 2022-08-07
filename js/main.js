@@ -12,9 +12,13 @@ const kadra_btn = document.getElementById("kadra_btn");
 // const links = document.querySelectorAll(".page-header ul a");
 const kids_btn = document.getElementById("kids_btn");
 const adult_btn = document.getElementById("adult_btn");
-const balet_btn = document.getElementById("balet-btn")
-const barre_btn = document.getElementById("barre-btn")
-const stretching_btn = document.getElementById("stretching_btn")
+const balet_btn = document.getElementById("balet-btn");
+const barre_btn = document.getElementById("barre-btn");
+const stretching_btn = document.getElementById("stretching_btn");
+
+const cennik_btn = document.getElementById("cennik-btn");
+const grafik_btn = document.getElementById("grafik-btn");
+const regulamin_btn = document.getElementById("regulamin-btn");
 
 kadra_btn.addEventListener("click", clickHandler);
 adult_btn.addEventListener("click", clickHandler);
@@ -33,7 +37,9 @@ function clickHandler(e) {
         behavior: "smooth"
     });
 }
-
+const newTab = (a) => {
+    window.open(a, "_blank");
+}
 $(document).ready(function() {
     $("#slider").owlCarousel();
 });
