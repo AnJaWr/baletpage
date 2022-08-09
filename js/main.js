@@ -6,7 +6,13 @@ window.addEventListener('load', function() {
     setTimeout(function() {
         preloader.classList.remove('show-preloader');
     }, 2000);
+
+    setTimeout(function() {
+        cookieConsent();
+    }, 2500);
+
 });
+
 
 const kadra_btn = document.getElementById("kadra_btn");
 // const links = document.querySelectorAll(".page-header ul a");

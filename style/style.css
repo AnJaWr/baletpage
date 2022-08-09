@@ -31,7 +31,7 @@ a {
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 10000;
+    z-index: 9999999;
     visibility: hidden;
     opacity: 0;
     width: 100vw;
@@ -39,6 +39,7 @@ a {
     top: 0px;
     margin: 0px;
     background-color: #f5f0f0;
+    overflow: hidden;
     transition: opacity 400ms ease-in-out, visibility 0s 400ms;
 }
 
