@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
 
     setTimeout(function() {
         cookieConsent();
-    }, 2500);
+    }, 2550);
 
 });
 
