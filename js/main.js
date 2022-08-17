@@ -76,31 +76,71 @@ $(document).ready(function() {
 
 
 
-    function deselect(e) {
-        $('.pop').slideFadeToggle(function() {
-            e.removeClass('selected');
-        });
+    // function deselect(e) {
+    //     $('.pop').slideFadeToggle(function() {
+    //         e.removeClass('selected');
+    //     });
+    // }
+
+    // $(function() {
+    //     $('#kadra_btn').on('click', function() {
+    //         if ($(this).hasClass('selected')) {
+    //             deselect($(this));
+    //         } else {
+    //             $(this).addClass('selected');
+    //             $('.pop').slideFadeToggle();
+    //         }
+    //         return false;
+    //     });
+
+    //     $('#close').on('click', function() {
+    //         deselect($('#kadra_btn'));
+    //         return false;
+    //     });
+    // });
+
+    // $.fn.slideFadeToggle = function(easing, callback) {
+    //     return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+    // };
+
+
+    const openModalButtons = document.querySelectorAll('[data-modal-target]')
+    const closeModalButtons = document.querySelectorAll('[data-close-button]')
+    const overlay = document.getElementById('overlay')
+
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = document.querySelector(button.dataset.modalTarget)
+            openModal(modal)
+        })
+    })
+
+    overlay.addEventListener('click', () => {
+        const modals = document.querySelectorAll('.modal.active')
+        modals.forEach(modal => {
+            closeModal(modal)
+        })
+    })
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal')
+            closeModal(modal)
+        })
+    })
+
+    function openModal(modal) {
+        if (modal == null) return
+        modal.classList.add('active')
+        overlay.classList.add('active')
     }
 
-    $(function() {
-        $('#kadra_btn').on('click', function() {
-            if ($(this).hasClass('selected')) {
-                deselect($(this));
-            } else {
-                $(this).addClass('selected');
-                $('.pop').slideFadeToggle();
-            }
-            return false;
-        });
+    function closeModal(modal) {
+        if (modal == null) return
+        modal.classList.remove('active')
+        overlay.classList.remove('active')
+    }
 
-        $('#close').on('click', function() {
-            deselect($('#kadra_btn'));
-            return false;
-        });
-    });
 
-    $.fn.slideFadeToggle = function(easing, callback) {
-        return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
-    };
-
+    // modal popup code from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal.git
 });

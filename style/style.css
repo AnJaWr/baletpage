@@ -9,7 +9,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
     background-color: #f5f0f0;
     color: rgb(31, 29, 29);
-    width: 100%;
+    max-width: 100vw;
     /* height: 100%; */
 }
 
@@ -85,7 +85,7 @@ figure {
 }
 
 .main_container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -95,7 +95,8 @@ figure {
 }
 
 .main_container_carousel {
-    padding-top: 55px;
+    /* padding-top: 55px; */
+    max-height: 80vh;
 }
 
 #home {
@@ -109,6 +110,7 @@ figure {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    padding-bottom: 20px;
 }
 
 .logo_container {
@@ -273,16 +275,16 @@ h2 {
 
 .member_photo {
     display: flex;
-    flex-wrap: nowrap;
-    /* width: 100%; */
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     /* height: 50vh; */
     /* margin: 5px 10px 0px; */
 }
 
 .photo_description {
-    width: 80%;
-    padding: 20px
+    width: 100%;
+    padding: 20px;
+    text-align: center;
 }
 
 .photo_description>h2 {
@@ -290,31 +292,45 @@ h2 {
 }
 
 .member_photo-img {
-    border-radius: 50%;
+    border-radius: 5px;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
 }
 
 .anna {
-    background-image: url(../img/avatar.jpg);
+    background-image: url(../img/anna.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
 }
 
 .alina {
-    background-image: url(../img/zdjęcia-ALINA-Balet-760x760.jpg);
+    background-image: url(../img/alina.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .dasha {
-    background-image: url(../img/dasha.jpg);
+    background-image: url(../img/dasha2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .member_container {
-    min-height: 50vh;
+    min-height: 70vh;
     background-color: #ebebeb;
-    margin: 20px;
+    /* margin: 20px; */
     padding: 20px;
     min-width: 45vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .member_description {
@@ -382,7 +398,8 @@ h2 {
     background-position: -24px -53px;
 }
 
-.pop {
+
+/* .pop {
     display: none;
     margin-top: 15px;
     position: absolute;
@@ -391,6 +408,52 @@ h2 {
     width: 60vw;
     z-index: 50;
     padding: 25px 25px 20px;
+} */
+
+.modal {
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #ebebeb;
+    width: 96%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 
@@ -448,9 +511,9 @@ h2 {
     background-position: center;
     width: 100vw;
     min-height: 70vh;
-    margin: 5px;
-    padding: 10px;
-    box-shadow: 5px 0px 5px rgb(0 0 0 / 40%);
+    /* margin: 5px;
+    padding: 10px; */
+    /* box-shadow: 5px 0px 5px rgb(0 0 0 / 40%); */
 }
 
 .main_container_longer {
@@ -470,6 +533,11 @@ h2 {
 
 #adult {
     background-color: #ebebeb;
+}
+
+.button_container.adults {
+    margin-top: 15px;
+    margin-bottom: 15px
 }
 
 #adult ul li::before {
@@ -507,7 +575,7 @@ h5 {
 
 .ballerina_stretching-mobile {
     background-image: url(../img/stretching.jpg);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
@@ -523,19 +591,19 @@ h5 {
     background-size: cover;
     width: 100vw;
     min-height: 70vh;
-    margin: 15px 5px;
+    /* margin: 15px 5px; */
     padding: 10px;
 }
 
 .ballerina_2-mobile {
     background-image: url(../img/IMG_1387_Original.jpeg);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     min-height: 70vh;
-    margin: 15px 5px;
-    padding: 10px;
+    /* margin: 15px 5px;
+    padding: 10px; */
 }
 
 
@@ -774,6 +842,7 @@ footer {
     }
     .member_container {
         min-width: 30vw;
+        margin: 25px;
     }
     .screen_visible {
         display: block;
@@ -811,11 +880,11 @@ footer {
         background-image: url(../img/4S7A1830.jpg);
     }
     .ballerina-img {
-        background-position: center;
+        background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 35%;
-        height: 80%;
+        width: 25%;
+        /* height: 80%; */
         margin-top: 45px;
         margin-left: 25px;
         padding: 10px;
@@ -856,6 +925,22 @@ footer {
     .div_wrapper {
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+    .button_container.adults {
+        margin-top: 35px;
+        margin-bottom: 5px
+    }
+    .modal {
+        position: fixed;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        border-radius: 10px;
+        z-index: 10;
+        background-color: #ebebeb;
+        width: 45%;
+        max-width: 80%;
     }
 }
 

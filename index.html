@@ -69,7 +69,7 @@
                     Nauka w&nbsp;naszym studiu umożliwia profesjonalne przygotowanie dzieci do&nbsp;rekrutacji do&nbsp;najlepszych szkół choreograficznych i&nbsp;baletowych. W&nbsp;2022&nbsp;roku nasi absolwenci zostali przyjęci do Ogólnokształcącej Szkoły Baletowej im.&nbsp;Romana
                     Turczynowicza - jest to&nbsp;dla nas ogromna radość, a&nbsp;dla każdego dziecka, któremu udało się zrealizować swoje marzenie, niesamowity sukces.</p>
                 <div class="button_container">
-                    <div class="button" id="kadra_btn" href="#kadra" show="kadra" style="padding:7px">Nasza kadra</div>
+                    <div class="button" id="kadra_btn" href="#kadra" show="kadra" style="padding:7px" data-modal-target="#modal">Nasza kadra</div>
                 </div>
             </div>
             <!-- style="padding:7px; border-radius: 5%; background-color:rgba(255, 255, 255, .15);  
@@ -77,12 +77,13 @@
         </div>
         <!-- =============================== kadra carousel==================================== -->
 
-        <div class="main_container_carousel akapit  pop" id="kadra">
+        <div class="main_container_carousel akapit modal" id="modal" id="kadra">
+            <!-- wyrzucona kz wyżej klasa pop -->
             <div class="owl-carousel  owl-theme" id="slider">
 
-                <div class="member_container item">
-                    <div class="member_photo one">
-                        <div class="member_photo-img alina"></div>
+                <div class="member_container alina ">
+                    <div class="member_photo one ">
+                        <!-- <div class="member_photo-img alina"></div> -->
                         <div class="photo_description">
                             <h2 style="font-weight:bold; display: inline">Alina Klopyzhnykova - tancerka, pedagog tańca klasycznego, instruktor stretchingu, barre. </h2>
                         </div>
@@ -104,9 +105,9 @@
 
 
 
-                <div class="member_container">
-                    <div class="member_photo one">
-                        <div class="member_photo-img anna"></div>
+                <div class="member_container anna">
+                    <div class="member_photo one ">
+                        <!-- <div class="member_photo-img anna"></div> -->
                         <div class="photo_description">
                             <h2 style="font-weight:bold; display: inline">Anna Yefimenko - choreograf, tancerka, trenerka tańca i gimnastyki artystycznej</h2>
                         </div>
@@ -122,13 +123,14 @@
                 </div>
 
 
-                <div class="member_container">
-                    <div class="member_photo one">
-                        <div class="member_photo-img dasha"></div>
+                <div class="member_container dasha">
+                    <div class="member_photo one ">
+
                         <div class="photo_description">
                             <h2 style="font-weight:bold; display: inline">
                                 Dasha Akatowa - profesjonalna tancerka zawodowa po szkole choreograficznej i baletowej</h2>
                         </div>
+                        <!-- <div class="member_photo-img dasha"></div> -->
                     </div>
                     <div class="member_description one">
                         <p> Swoje doświadczenie zdobywała jako tancerka oraz aktorka na deskach teatru pod okiem profesjonalnych choreografów.</p>
@@ -141,14 +143,20 @@
             </div>
             <div class="div_wrapper screen_visible" id="close">
                 <div class="button_container" style="margin-bottom:25px; margin-top:25px">
-                    <a href="#adult"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
+                    <button data-close-button class="close-button">
+                 
+                        <img src="img/pointy.png" style="width: 80px; height: 80px;" /></button>
+
                 </div>
             </div>
 
             <div class="button_container mobile_visible" style="margin-bottom:50px" id="close">
-                <a href="#adult"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
+                <button data-close-button class="close-button">
+                    <img src="img/pointy.png" style="width: 50px; height: 50px;" />
+                </button>
             </div>
         </div>
+        <div id="overlay"></div>
         <!-- ==========================zajecia===================== -->
         <div class="main_container_longer akapit" id="zajecia">
             <div class="logo_container">
@@ -259,7 +267,7 @@
             <div class="div_wrapper">
                 <h2 style="text-align: center">
                     Zajęcia dla dorosłych </h2>
-                <div class="button_container" style="margin-top:70px">
+                <div class="button_container adults">
 
                     <div class="button" id="balet-btn" href="#baletforadult">Balet</div>
                     <div class="button" id="barre-btn" href="#barre">Barre</div>
