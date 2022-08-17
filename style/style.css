@@ -108,6 +108,7 @@ figure {
     /* background-image: url(/img/bg1.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .logo_container {
@@ -266,8 +267,8 @@ h2 {
 
 #kadra {
     background-color: #f5e1e1;
-    width: 100%;
-    min-height: 100vh;
+    width: 45%;
+    min-height: 85vh;
 }
 
 .member_photo {
@@ -379,6 +380,17 @@ h2 {
 
 .owl-carousel .next-slide:hover {
     background-position: -24px -53px;
+}
+
+.pop {
+    display: none;
+    margin-top: 15px;
+    position: absolute;
+    top: 100vh;
+    text-align: left;
+    width: 60vw;
+    z-index: 50;
+    padding: 25px 25px 20px;
 }
 
 

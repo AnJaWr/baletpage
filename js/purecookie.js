@@ -1,7 +1,7 @@
 // --- Config --- //
 var purecookieTitle = "Cookies."; // Title
 var purecookieDesc = "Ta strona zawiera ciasteczka"; // Description
-var purecookieLink = '<a href="privacy.html/" target="_blank">Polityka prywatności</a>'; // Cookiepolicy link
+var purecookieLink = '<a href="../privacy.html/" target="_blank">Polityka prywatności</a>'; // Cookiepolicy link
 var purecookieButton = "Zgadzam się"; // Button text
 
 

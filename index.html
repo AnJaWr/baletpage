@@ -27,6 +27,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- cookies -->
+
     <link rel="stylesheet" href="style/purecookie.css" />
     <script src="js/purecookie.js"></script>
 
@@ -67,7 +69,7 @@
                     Nauka w&nbsp;naszym studiu umożliwia profesjonalne przygotowanie dzieci do&nbsp;rekrutacji do&nbsp;najlepszych szkół choreograficznych i&nbsp;baletowych. W&nbsp;2022&nbsp;roku nasi absolwenci zostali przyjęci do Ogólnokształcącej Szkoły Baletowej im.&nbsp;Romana
                     Turczynowicza - jest to&nbsp;dla nas ogromna radość, a&nbsp;dla każdego dziecka, któremu udało się zrealizować swoje marzenie, niesamowity sukces.</p>
                 <div class="button_container">
-                    <div class="button" id="kadra_btn" href="#kadra" style="padding:7px">Nasza kadra</div>
+                    <div class="button" id="kadra_btn" href="#kadra" show="kadra" style="padding:7px">Nasza kadra</div>
                 </div>
             </div>
             <!-- style="padding:7px; border-radius: 5%; background-color:rgba(255, 255, 255, .15);  
@@ -75,10 +77,8 @@
         </div>
         <!-- =============================== kadra carousel==================================== -->
 
-        <div class="main_container_carousel akapit" id="kadra">
+        <div class="main_container_carousel akapit  pop" id="kadra">
             <div class="owl-carousel  owl-theme" id="slider">
-
-
 
                 <div class="member_container item">
                     <div class="member_photo one">
@@ -138,6 +138,15 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="div_wrapper screen_visible" id="close">
+                <div class="button_container" style="margin-bottom:25px; margin-top:25px">
+                    <a href="#adult"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
+                </div>
+            </div>
+
+            <div class="button_container mobile_visible" style="margin-bottom:50px" id="close">
+                <a href="#adult"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
             </div>
         </div>
         <!-- ==========================zajecia===================== -->
@@ -408,10 +417,10 @@
                                 <img src="img/square-facebook-brands.svg" alt="facebook"></a>
                         </div>
                         <div class="link">
-                            <a herf="https://www.instagram.com/alisofballet/"><img src="img/square-instagram-brands.svg" alt="instagram"></a>
+                            <a href="https://www.instagram.com/alisofballet"><img src="img/square-instagram-brands.svg" alt="instagram"></a>
                         </div>
                         <div class="link link-envelop">
-                            <a href="mailto:balletalisof@gmail.com">
+                            <a href="mailto:alisofballet@gmail.com">
                                 <img src="img/envelope-solid.svg" alt="mail"></a>
                         </div>
                         <div class="link">
@@ -446,7 +455,7 @@
                             <label>Message:</label>
                         </div>
                         <button class="submit-btn">Send</button>
-                        <div class="form_check" style="font-size:0.9rem"> Wysłanie wiadomości formularzem oznacza wyrażenie zgody na przetwarzanie danych osobowych w celu kontaktu w sprawie zapytania. <strong> <a href="/assets/privacy.html" target="_blank">Więcej
+                        <div class="form_check" style="font-size:0.9rem"> Wysłanie wiadomości formularzem oznacza wyrażenie zgody na przetwarzanie danych osobowych w celu kontaktu w sprawie zapytania. <strong> <a href="privacy.html" target="_blank">Więcej
                         </a></strong></div>
                     </form>
                 </div>
@@ -456,13 +465,14 @@
 
         <!-- end of  wrapper -->
     </div>
-    <footer><a href="assets/privacy.html">Privacy</a></footer>
+    <footer><a href="privacy.html">Privacy</a></footer>
 
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/owl.mycarousel.js"></script>
+    <!-- <script src="js/jquery.mobile-1.4.5.min.js"></script> -->
     <script src="js/main.js"></script>
 
 

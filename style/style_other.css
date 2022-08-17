@@ -119,6 +119,14 @@ td {
     opacity: 0;
 } */
 
+.showme {
+    display: flex
+}
+
+.hide {
+    display: none;
+}
+
 .show {
     display: table-cell;
 }

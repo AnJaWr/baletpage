@@ -1,0 +1,213 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+
+html,
+body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    /* background-color: #f5f0f0; */
+    color: rgb(12, 12, 12);
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background-image: url(../img/bg1.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main_container_carousel {
+    padding-top: 55px;
+}
+
+#kadra {
+    width: 60%;
+    overflow-y: hidden;
+}
+
+.member_photo {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    /* height: 50vh; */
+    /* margin: 5px 10px 0px; */
+}
+
+.photo_description {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.photo_description>h2 {
+    font-size: 0.8rem;
+}
+
+.member_photo-img {
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.anna {
+    background-image: url(../img/avatar.jpg);
+}
+
+.alina {
+    background-image: url(../img/zdjęcia-ALINA-Balet-760x760.jpg);
+}
+
+.dasha {
+    background-image: url(../img/dasha.jpg);
+}
+
+.member_container {
+    min-height: 50vh;
+    background-color: #ebebeb;
+    margin: 20px;
+    padding: 20px;
+    max-width: 45vw;
+}
+
+.member_description {
+    font-size: 0.7rem;
+    text-align: justify;
+    margin: 0px 25px 25px;
+}
+
+.member_description>ul {
+    margin-left: 20px;
+    list-style: none;
+}
+
+.member_description>p {
+    margin-bottom: 5px;
+}
+
+.motto {
+    width: 100%;
+    text-align: center;
+}
+
+#kadra ul li::before {
+    content: "\25B9";
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#slider {
+    position: relative;
+}
+
+.owl-carousel .nav-btn {
+    height: 47px;
+    position: absolute;
+    width: 26px;
+    cursor: pointer;
+    top: 100px !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.owl-carousel .prev-slide {
+    background: url(/img/l-arrow.png) no-repeat scroll 0 0;
+    left: -33px;
+}
+
+.owl-carousel .next-slide {
+    background: url(/img/r-arrow.png) no-repeat scroll -24px 0px;
+    right: -33px;
+}
+
+.owl-carousel .prev-slide:hover {
+    background-position: 0px -53px;
+}
+
+.owl-carousel .next-slide:hover {
+    background-position: -24px -53px;
+}
+
+.screen_visible {
+    display: none;
+}
+
+.mobile_visible {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+        color: rgb(67, 66, 67)
+    }
+    .button {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        margin-right: 50px;
+        padding: 10px;
+        width: 10%;
+        background-color: #efd1d1;
+        border-radius: 3px;
+        transition: 0.8s;
+    }
+    .button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .photo_description>h2 {
+        font-size: 1.3rem;
+    }
+    .member_description {
+        font-size: 1rem;
+    }
+    .member_container {
+        min-width: 30vw;
+    }
+    .screen_visible {
+        display: block;
+    }
+    .mobile_visible {
+        display: none;
+    }
+    #kadra_btn {
+        width: 25%;
+        font-size: 1.3rem;
+    }
+    #kadra_btn:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.362);
+        transition: 0.8s;
+    }
+    #about {
+        justify-content: space-evenly;
+    }
+    .block {
+        width: 30%;
+    }
+    .div_wrapper {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
