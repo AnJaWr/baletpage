@@ -27,7 +27,7 @@ a {
 }
 
 .preloader {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -131,11 +131,6 @@ a {
     visibility: visible;
     opacity: 1;
     transition: 2s;
-}
-
-.hide0nEnter {
-    visibility: hidden;
-    opacity: 0;
 }
 
 .div_wrapper {
