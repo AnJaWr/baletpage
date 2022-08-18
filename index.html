@@ -15,6 +15,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+
+
+    <!-- ui -->
+    <link rel="stylesheet" href="js/jquery-ui.min.css">
+    <!-- my -->
+
     <link rel="stylesheet" href="style/style.css">
 
     <!-- favico -->
@@ -36,14 +42,14 @@
 </head>
 
 <body>
+    <div class="preloader" id="preloader">
+        <figure>
+            <img src="img/alisof_lighter.png" alt="Alisof Ballet">
 
-    <div class="wrapper">
-        <div class="preloader" id="preloader">
-            <figure>
-                <img src="img/alisof_lighter.png" alt="Alisof Ballet">
+        </figure>
+    </div>
+    <div class="wrapper hide0nEnter" id="main_wrapper">
 
-            </figure>
-        </div>
         <div class="main_container akapit" id="home">
             <div class="logo"></div>
             <div class="menu">
@@ -69,7 +75,7 @@
                     Nauka w&nbsp;naszym studiu umożliwia profesjonalne przygotowanie dzieci do&nbsp;rekrutacji do&nbsp;najlepszych szkół choreograficznych i&nbsp;baletowych. W&nbsp;2022&nbsp;roku nasi absolwenci zostali przyjęci do Ogólnokształcącej Szkoły Baletowej im.&nbsp;Romana
                     Turczynowicza - jest to&nbsp;dla nas ogromna radość, a&nbsp;dla każdego dziecka, któremu udało się zrealizować swoje marzenie, niesamowity sukces.</p>
                 <div class="button_container">
-                    <div class="button" id="kadra_btn" href="#kadra" show="kadra" style="padding:7px" data-modal-target="#modal">Nasza kadra</div>
+                    <div class="button" id="kadra_btn" style="padding:7px" data-modal-target="#kadra">Nasza kadra</div>
                 </div>
             </div>
             <!-- style="padding:7px; border-radius: 5%; background-color:rgba(255, 255, 255, .15);  
@@ -77,7 +83,7 @@
         </div>
         <!-- =============================== kadra carousel==================================== -->
 
-        <div class="main_container_carousel akapit modal" id="modal" id="kadra">
+        <div class="main_container_carousel akapit modal" id="kadra">
             <!-- wyrzucona kz wyżej klasa pop -->
             <div class="owl-carousel  owl-theme" id="slider">
 
@@ -141,14 +147,14 @@
                 </div>
 
             </div>
-            <div class="div_wrapper screen_visible" id="close">
-                <div class="button_container" style="margin-bottom:25px; margin-top:25px">
-                    <button data-close-button class="close-button">
+
+            <div class="button_container screen_visible" id="close" style="margin-bottom:25px; margin-top:25px">
+                <button data-close-button class="close-button">
                  
                         <img src="img/pointy.png" style="width: 80px; height: 80px;" /></button>
 
-                </div>
             </div>
+
 
             <div class="button_container mobile_visible" style="margin-bottom:50px" id="close">
                 <button data-close-button class="close-button">
@@ -163,26 +169,108 @@
                 <div class="logo"></div>
             </div>
             <div id="zajecia_podzial">
-                <div class="col colRight img1" id="kids_btn" href="#kids">
+                <div class="col reveal fade-right grow colRight img1" id="kids_btn" href="#kids" showme="kids">
 
                     <div class="colTitle">Dla dzieci</div>
                 </div>
-                <div class="col colLeft  bg img2" id="adult_btn" href="#adult">
+                <div class="col reveal fade-left grow colLeft  bg img2" id="adult_btn" href="#adult" showme="adult">
                     <div class="colTitle">Dla dorosłych</div>
                 </div>
 
             </div>
             <div id="informacje" class="informacje-div">
 
-                <div class="button" id="cennik-btn" onclick="newTab('cennik.html')">Cennik</div>
-                <div class="button" id="grafik-btn" onclick="newTab('grafik.html')">Grafik</div>
-                <div class="button" id="regulamin-btn" onclick="newTab('regulamin.html')">Regulamin</div>
+
+
+
+
+                <div class="button" id="cennik-btn" href="cennik.html" data-modal-target="#cennik">Cennik</div>
+                <div class="button" id="grafik-btn" href="grafik.html">Grafik</div>
+                <div class="button" id="regulamin-btn" href="regulamin.html">Regulamin</div>
             </div>
         </div>
+
+
+        <!-- ============================ cennik ============================ -->
+        <div class="main_container_carousel akapit modal" id="cennik">
+
+            <div class="cennik_wrapper">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#cennik_kids">Cennik - dzieci</a></li>
+                        <li><a href="#cennik_adults">Cennik - dorośli</a></li>
+
+                    </ul>
+
+                    <!-- <div class="button" id="cennikK-btn" href="cennik_kids" showme="cennik_kids">Cennik - dzieci</div>
+                    <div class="button" id="cennikA-btn" href="cennik_adults" showme="cennik_adults">Cennik - dorośli</div> -->
+
+
+                    <div class="cennik_section info_block " id="cennik_kids">
+                        <h2> Cennik dzieci </h2>
+
+                        <p> Zajęcia próbne 30 zł </p>
+                        <p>Jednorazowe wejście 45 zł </p>
+
+                        <h3>„Baby balerina” </h3>
+                        <p>3-4,5 lat (2 x 35min w tygodniu)</p>
+                        <p>Miesięczny koszt zajęć 250 zł </p>
+
+                        <h3>„Arabeski”</h3>
+                        <p> 4,5-7 lat (2 x 55min w tygodniu)</p>
+                        <p>Miesięczny koszt zajęć 350 zł </p>
+
+                        <h3>„Łabędzie” 7-13 lat </h3>
+                        <p>(3 x 60min w tygodniu)</p>
+
+                        <p> Miesięczny koszt zajęć 500 zł </p>
+                    </div>
+
+
+
+                    <div class="cennik_section info_block" id="cennik_adults">
+                        <h2>Cennik dorośli</h2>
+                        <p>Kameralne grupy 8 osób </p>
+                        <p>Próbne zajęcia 40 zł </p>
+                        <p>Jednorazowe wejście 60 zł </p>
+
+                        <h3>Balet cennik </h3>
+                        <p>Karnet 4 zajęcia 240 zł </p>
+                        <p>Karnet 8 zajęć 450 zł</p>
+
+                        <h3>Barre trening </h3>
+                        <p>Próbne zajęcia 35 zł </p>
+                        <p>Jednorazowe wejście 55 zł</p>
+                        <p> Karnet 4 zajęcia 185 zł </p>
+                        <p> Karnet 8 zajęć 350 zł </p>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="button_container screen_visible" id="close" style="margin-bottom:25px; margin-top:25px">
+                <button data-close-button class="close-button">
+                 
+                        <img src="img/pointy.png" style="width: 80px; height: 80px;" /></button>
+
+            </div>
+
+
+            <div class="button_container mobile_visible" style="margin-bottom:50px" id="close">
+                <button data-close-button class="close-button">
+                    <img src="img/pointy.png" style="width: 50px; height: 50px;" />
+                </button>
+            </div>
+        </div>
+
+        <div id="overlay"></div>
         <!-- ============================ dzieci =============================-->
-        <div class="main_container_longer" id="kids">
-            <div class="div_wrapper" style="margin-bottom:8vh">
-                <div class="kids-d text block">
+        <div class="main_container_longer section" id="kids">
+            <div class="div_wrapper">
+                <div class="kids-d block text">
                     <h2>BALET DLA DZIECI</h2>
                     <p class="block-d">
 
@@ -247,62 +335,77 @@
                         <strong>Liczba zajęć to&nbsp;3&nbsp;jednostki w&nbsp;tygodniu trwające po&nbsp;60&nbsp;min.</strong></p>
                 </div>
             </div>
-            <div class="div_wrapper screen_visible">
-                <div class="button_container" style="margin-bottom:70px; margin-top:70px">
-                    <a href="#home"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
-                </div>
-            </div>
-            <div class="div_wrapper mobile_visible">
-                <div class="button_container" style="margin-bottom:50px">
-                    <a href="#home"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
-                </div>
+
+            <div class="screen_visible button_container" style="margin-bottom:20px; margin-top:20px">
+                <a href="#zajecia" class="close" close="kids"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
             </div>
 
+            <div class="button_container mobile_visible" style="margin-bottom:40px">
+                <a href="#zajecia" class="close" close="kids"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
+            </div>
         </div>
+
 
         <!-- ============================ dorosli =============================-->
 
-        <div class="main_container_longer" id="adult">
-
-            <div class="div_wrapper">
-                <h2 style="text-align: center">
-                    Zajęcia dla dorosłych </h2>
-                <div class="button_container adults">
-
-                    <div class="button" id="balet-btn" href="#baletforadult">Balet</div>
-                    <div class="button" id="barre-btn" href="#barre">Barre</div>
-                    <div class="button" id="stretching_btn" href="#stretching">Stretching</div>
-
-                </div>
+        <div class="main_container_longer section" id="adult">
+            <div class="adult_header">
+                <h2 style="text-align: center"> Zajęcia dla dorosłych </h2>
             </div>
-            <div class="div_wrapper">
-                <div class="screen_visible ballerina-img ballerina_2"></div>
-                <div class="mobile_visible ballerina_2-mobile"></div>
-                <div class="adult-d block" id="baletforadult">
-                    <h3 style="text-align: center;">
-                        Zajęcia baletowe dla dorosłych </h3>
-                    <p class="block-d">Balet to marzenie, które często zaczyna się w dzieciństwie i wraca po latach.</p>
-                    <p class="block-d">Oferujemy naukę baletu od podstaw do poziomu średniozaawansowanego i zaawansowanego. <br><br>Lekcja baletu składa się z 4 części :
-                        <ul>
+            <div class="div_wrapper adult_lesson_greed">
 
-                            <li class="nolist">
-                                Ćwiczenia przy drążku</li>
-                            <li class="nolist">
-                                Ćwiczenia na środku sali </li>
-                            <li class="nolist">
-                                Allegro, czyli skoki </li>
-                            <li class="nolist">
-                                Pointy </li>
-                        </ul>
-                    </p><br>
-                    <p class="block-d">Zajęcia baletowe pozwolą ci osiągnąć sprawność całego ciała, lepszą koordynację, płynność ruchów, a także rozwinąć wytrzymałość, siłę, elastyczność, taneczność oraz umuzykalnienie. Często brakuje nam tego, gdy nie znajdujemy czasu
-                        na ćwiczenia. Jeśli chcesz poprawić postawę, wzmocnić wszystkie partie ciała i wysmuklić nogi, a ponadto stać się bardziej otwartą i pewną siebie osobą- zajęcia z wykwalifikowanymi pedagogami w studio tańca ALISOFballet są dokładnie
-                        tym, czego potrzebujesz. </p>
-                    <p class="block-d">Miła atmosfera w klasach, indywidualne podejście, dbałość o twoje umiejętności, absolutne bezpieczeństwo i tylko odpowiednie obciążenie - nasi klienci bardzo doceniają te atuty naszej szkoły. ALISOFballet to miejsce, gdzie odnajdziesz
-                        siebie, czerpiąc radość i satysfakcję z tańca.
-                    </p>
+                <div class="adult_activities" id="balet-btn" href="#baletforadult" showme="baletforadult">
+                    <div class="colTitle">Balet</div>
                 </div>
+                <div class="adult_activities" id="barre-btn" href="#barre" showme="barre">
+                    <div class="colTitle">Barre</div>
+                </div>
+                <div class="adult_activities" id="stretching_btn" href="#stretching" showme="stretching">
+                    <div class="colTitle">Stretching</div>
+                </div>
+                <div class="adult_activities" id="balstretching_btn" href="#stretching" showme="balstretching">
+                    <div class="colTitle">Balet + stretching</div>
+                </div>
+
             </div>
+            <div class="button_container screen_visible" style="margin-bottom:25px; margin-top:25px">
+                <a href="#zajecia" class="close" close="adult"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
+            </div>
+
+
+            <div class="button_container mobile_visible" style="margin-bottom:12px; margin-top:12px;">
+                <a href="#zajecia" class="close" close="adult"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
+            </div>
+        </div>
+
+        <div class="div_wrapper section" id="baletforadult">
+            <div class="screen_visible ballerina-img ballerina_2"></div>
+            <div class="mobile_visible ballerina_2-mobile"></div>
+            <div class="adult-d block">
+                <h3 style="text-align: center;">
+                    Zajęcia baletowe dla dorosłych </h3>
+                <p class="block-d">Balet to marzenie, które często zaczyna się w dzieciństwie i wraca po latach.</p>
+                <p class="block-d">Oferujemy naukę baletu od podstaw do poziomu średniozaawansowanego i zaawansowanego. <br><br>Lekcja baletu składa się z 4 części :
+                    <ul>
+
+                        <li class="nolist">
+                            Ćwiczenia przy drążku</li>
+                        <li class="nolist">
+                            Ćwiczenia na środku sali </li>
+                        <li class="nolist">
+                            Allegro, czyli skoki </li>
+                        <li class="nolist">
+                            Pointy </li>
+                    </ul>
+                </p><br>
+                <p class="block-d">Zajęcia baletowe pozwolą ci osiągnąć sprawność całego ciała, lepszą koordynację, płynność ruchów, a także rozwinąć wytrzymałość, siłę, elastyczność, taneczność oraz umuzykalnienie. Często brakuje nam tego, gdy nie znajdujemy czasu na ćwiczenia.
+                    Jeśli chcesz poprawić postawę, wzmocnić wszystkie partie ciała i wysmuklić nogi, a ponadto stać się bardziej otwartą i pewną siebie osobą- zajęcia z wykwalifikowanymi pedagogami w studio tańca ALISOFballet są dokładnie tym, czego potrzebujesz.
+                </p>
+                <p class="block-d">Miła atmosfera w klasach, indywidualne podejście, dbałość o twoje umiejętności, absolutne bezpieczeństwo i tylko odpowiednie obciążenie - nasi klienci bardzo doceniają te atuty naszej szkoły. ALISOFballet to miejsce, gdzie odnajdziesz
+                    siebie, czerpiąc radość i satysfakcję z tańca.
+                </p>
+            </div>
+
             <div class="div_wrapper ballet" id="ballet_adult">
                 <div class="adult_one block">
                     <h3> Balet od podstaw ( poziom podstawowy ) </h3>
@@ -321,98 +424,100 @@
                     <p class="block-d">Program lekcji obejmuje bardziej zaawansowane ćwiczenia przy drążku i na środku sali jak również w allegro. Oprócz tego uczymy ustawień na pointach, elementów choreografii scenicznej, układów tanecznych i występów na scenie. </p>
                     <p class="block-d"><strong>Czas trwania zajęć 1.15h </strong> </p>
                 </div>
-                <div class="block">
+                <div>
                     <p class="block-d"> W naszym studio taniec baletowy jest w zasięgu każdego, wiek nie stanowi żadnego ograniczenia! Nigdy nie jest za późno, aby spełnić swoje marzenia! </p>
                 </div>
-                <div class="div_wrapper screen_visible">
-                    <div class="button_container" style="margin-bottom:50px; margin-top:50px">
-                        <a href="#adult"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
-                    </div>
-                </div>
-            </div>
-            <div class="button_container mobile_visible" style="margin-bottom:50px">
-                <a href="#adult"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
-            </div>
 
-            <!-- </div> -->
-            <div class="div_wrapper" id="barre">
-                <div class="block-d block">
-                    <h3>BARRE - intensywny trening, pełen gracji i kobiecości</h3>
-                    <p class="block-d">To mieszanka ćwiczeń i różnych technik zainspirowany baletem w połączeniu z jogą, fitnessem i pilatesem – wszystko to gra w jednej harmonijnie zbudowanej lekcji.</p>
-                    <p class="block-d">Słowo "barre" z angielskiego oznacza drążek baletowy – jest on potrzebny do wykonania większości ćwiczeń. Trening BARRE jest jedną z najpopularniejszych form sportu kobiecego w Nowym Jorku i Los Angeles. </p>
-                    <p class="block-d">Zestawy siłowe, cardio, elementy jogi, baletu, pilatesu i rozciągania - wywołają nowe odczucia w ciele. Podczas treningu ćwiczymy wszystkie grupy mięśni bez wyjątku. Celem BARRE jest przede wszystkim ukształtowanie zgrabnych pośladków
-                        i odchudzenie ud, czyli kwestie, na których wielu kobietom szczególnie zależy. Rozciąganie pod koniec każdej lekcji utrwali wzmocnienie i pomoże złagodzić napięcie, poczuć lekkość ciała i przyjemne zmęczenie. To jest energochłonny
-                        trening, który pozwoli Ci pozbyć się zbędnych kilogramów. </p>
+                <div class="button_container screen_visible">
+                    <a href="#adult" class="close" close="baletforadult"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
                 </div>
 
-                <div class="block-d block">
 
-                    <h5>ILE KALORII MOŻNA ŚREDNIO SPALIĆ PODCZAS JEDNEGO TRENINGU? </h5>
-                    <p class="block-d">
-                        Tryb cardio jest odpowiedzialny za ruchy pełnej amplitudy i wysokie tempo treningu, więc w ciągu 60 minut spalisz około 250-400 kalorii . </p>
-
-
-
-                    <h5>KTO MOŻE CHODZIĆ NA BARRE? </h5>
-                    <p class="block-d">
-                        Trening BARRE nie wymaga specjalnego przygotowania, jest odpowiedni dla wszystkich osób, chcących nadać ciału smuklejszy kształt. </p>
-
-                    <h5> JAK SIĘ UBRAĆ NA TAKI TRENING? </h5>
-                    <p class="block-d">
-                        Do treningu BARRE wystarczy zwykły strój sportowy oraz skarpetki. Wszystko, co jest potrzebne do ćwiczeń, mieści się w damskiej torebce. </p><br>
-                    <p class="block-d">
-                        BARRE twój nowy sport - musisz tylko spróbować.
-
-                    </p>
-                </div>
-                <div class="div_wrapper screen_visible">
-                    <div class="button_container" style="margin-bottom:25px; margin-top:25px">
-                        <a href="#adult"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
-                    </div>
-                </div>
                 <div class="button_container mobile_visible" style="margin-bottom:50px">
-                    <a href="#adult"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
+                    <a href="#adult" close="baletforadult" class="close"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
                 </div>
-            </div>
-            <!-- stretching -->
-
-            <div class="div_wrapper" id="stretching">
-                <div class="block-d block">
-                    <h3>Połączenie baletu i stretchingu </h3>
-                    <p class="block-d">To nowe spojrzenie na zajęcia tanecznie i rozciągające: zastąpiliśmy tradycyjną rozgrzewkę baletowymi ćwiczeniami przy drążku. </p>
-
-                    <p class="block-d">Łączenie tych dwóch kierunków przynosi ogromną korzyść dla duszy i ciała. Dlaczego? Podczas ćwiczeń baletowych mocno rozgrzewają się mięśnie, co pozwala od razu bezpiecznie przejść do rozciągania.
-                    </p>
-                    <p class="block-d">Podczas treningu skupiamy się na czystym klasycznym balecie, czyli wykonujemy ćwiczenia przy drążku, które : </p>
-                    <ul>
-                        <li class="nolist"> wysmuklają i wydłużają mięśnie </li>
-                        <li class="nolist">wspaniale kształtują sylwetkę</li>
-                        <li class="nolist"> wzmacniają ciało</li>
-                        <li class="nolist">uczą gracji </li>
-                        <li class="nolist"> korzystnie wpływają na naszą kondycję fizyczną i psychiczną</li>
-                        <li class="nolist">dają ogromną satysfakcję i wiele radości</li>
-                    </ul><br><br>
-
-                    <p class="block-d">Łącząc streaching z baletem, znacznie poszerzysz swój zakres ruchu. Wyjątkowość tego typu zajęć polega na tym, że rozciąganie jest wykonywane nie tylko we właściwy sposób, ale także w odpowiednim momencie - stretching zwiększa przepływ
-                        krwi i usprawnia dostarczanie substancji odżywczych do mięśni. Dzięki temu znacznie lepiej radzisz sobie z regeneracją po treningu. Balet + stretching to dawka aktywności, radości, a niepowtarzalne efekty z pewnością Cię zaskoczą.
-                    </p>
-
-                    <p class="block-d">Zajęcia trwają półtory godziny, przeznaczone są dla wszystkich, niezależnie od wieku i poziomu sprawności, nie jest wymagane doświadczenie w tańcu. </p>
-                </div>
-                <div class="screen_visible ballerina-img ballerina_stretching"></div>
-                <div class="mobile_visible ballerina_stretching-mobile"></div>
-
-            </div>
-            <div class="div_wrapper screen_visible">
-                <div class="button_container" style="margin-bottom:25px; margin-top:25px">
-                    <a href="#adult"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
-                </div>
-            </div>
-
-            <div class="button_container mobile_visible" style="margin-bottom:50px">
-                <a href="#adult"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
             </div>
         </div>
+        <!-- </div> -->
+        <div class="div_wrapper section" id="barre">
+            <div class="block-d block">
+                <h3>BARRE - intensywny trening, pełen gracji i kobiecości</h3>
+                <p class="block-d">To mieszanka ćwiczeń i różnych technik zainspirowany baletem w połączeniu z jogą, fitnessem i pilatesem – wszystko to gra w jednej harmonijnie zbudowanej lekcji.</p>
+                <p class="block-d">Słowo "barre" z angielskiego oznacza drążek baletowy – jest on potrzebny do wykonania większości ćwiczeń. Trening BARRE jest jedną z najpopularniejszych form sportu kobiecego w Nowym Jorku i Los Angeles. </p>
+                <p class="block-d">Zestawy siłowe, cardio, elementy jogi, baletu, pilatesu i rozciągania - wywołają nowe odczucia w ciele. Podczas treningu ćwiczymy wszystkie grupy mięśni bez wyjątku. Celem BARRE jest przede wszystkim ukształtowanie zgrabnych pośladków
+                    i odchudzenie ud, czyli kwestie, na których wielu kobietom szczególnie zależy. Rozciąganie pod koniec każdej lekcji utrwali wzmocnienie i pomoże złagodzić napięcie, poczuć lekkość ciała i przyjemne zmęczenie. To jest energochłonny
+                    trening, który pozwoli Ci pozbyć się zbędnych kilogramów. </p>
+            </div>
+
+            <div class="block-d block">
+
+                <h5>ILE KALORII MOŻNA ŚREDNIO SPALIĆ PODCZAS JEDNEGO TRENINGU? </h5>
+                <p class="block-d">
+                    Tryb cardio jest odpowiedzialny za ruchy pełnej amplitudy i wysokie tempo treningu, więc w ciągu 60 minut spalisz około 250-400 kalorii . </p>
+
+
+
+                <h5>KTO MOŻE CHODZIĆ NA BARRE? </h5>
+                <p class="block-d">
+                    Trening BARRE nie wymaga specjalnego przygotowania, jest odpowiedni dla wszystkich osób, chcących nadać ciału smuklejszy kształt. </p>
+
+                <h5> JAK SIĘ UBRAĆ NA TAKI TRENING? </h5>
+                <p class="block-d">
+                    Do treningu BARRE wystarczy zwykły strój sportowy oraz skarpetki. Wszystko, co jest potrzebne do ćwiczeń, mieści się w damskiej torebce. </p><br>
+                <p class="block-d">
+                    BARRE twój nowy sport - musisz tylko spróbować.
+
+                </p>
+            </div>
+
+            <div class="button_container screen_visible" style="margin-bottom:25px; margin-top:25px">
+                <a href="#adult" class="close" close="barre"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
+            </div>
+
+            <div class="button_container mobile_visible" style="margin-bottom:50px">
+                <a href="#adult" class="close" close="barre"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
+            </div>
+        </div>
+        <!-- stretching -->
+
+        <div class="div_wrapper section" id="stretching">
+            <div class="block-d block">
+                <h3>Połączenie baletu i stretchingu </h3>
+                <p class="block-d">To nowe spojrzenie na zajęcia tanecznie i rozciągające: zastąpiliśmy tradycyjną rozgrzewkę baletowymi ćwiczeniami przy drążku. </p>
+
+                <p class="block-d">Łączenie tych dwóch kierunków przynosi ogromną korzyść dla duszy i ciała. Dlaczego? Podczas ćwiczeń baletowych mocno rozgrzewają się mięśnie, co pozwala od razu bezpiecznie przejść do rozciągania.
+                </p>
+                <p class="block-d">Podczas treningu skupiamy się na czystym klasycznym balecie, czyli wykonujemy ćwiczenia przy drążku, które : </p>
+                <ul>
+                    <li class="nolist"> wysmuklają i wydłużają mięśnie </li>
+                    <li class="nolist">wspaniale kształtują sylwetkę</li>
+                    <li class="nolist"> wzmacniają ciało</li>
+                    <li class="nolist">uczą gracji </li>
+                    <li class="nolist"> korzystnie wpływają na naszą kondycję fizyczną i psychiczną</li>
+                    <li class="nolist">dają ogromną satysfakcję i wiele radości</li>
+                </ul><br><br>
+
+                <p class="block-d">Łącząc streaching z baletem, znacznie poszerzysz swój zakres ruchu. Wyjątkowość tego typu zajęć polega na tym, że rozciąganie jest wykonywane nie tylko we właściwy sposób, ale także w odpowiednim momencie - stretching zwiększa przepływ
+                    krwi i usprawnia dostarczanie substancji odżywczych do mięśni. Dzięki temu znacznie lepiej radzisz sobie z regeneracją po treningu. Balet + stretching to dawka aktywności, radości, a niepowtarzalne efekty z pewnością Cię zaskoczą.
+                </p>
+
+                <p class="block-d">Zajęcia trwają półtory godziny, przeznaczone są dla wszystkich, niezależnie od wieku i poziomu sprawności, nie jest wymagane doświadczenie w tańcu. </p>
+            </div>
+            <div class="screen_visible ballerina-img ballerina_stretching"></div>
+            <div class="mobile_visible ballerina_stretching-mobile"></div>
+
+
+
+            <div class="button_container screen_visible" style="margin-bottom:25px; margin-top:25px">
+                <a href="#adult" class="close" close="stretching"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
+            </div>
+
+
+            <div class="button_container mobile_visible" style="margin-bottom:50px">
+                <a href="#adult" class="close" close="stretching"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
+            </div>
+        </div>
+        <!-- </div> -->
         <!-- ===================================kontakt ============================== -->
 
         <div id="contact">
@@ -438,7 +543,7 @@
                         <div class="infobox-wrapper">
                             <div class="infobox adress_info">
                                 <strong>Teatr Capitol</strong> <br> Ul. Marszałkowska 115/lok.220<br> 00-102 Warszawa <br><strong>
-                <a href="mailto:balletalisof@gmail.com"> balletalisof@gmail.com</a> <br>
+                <a href="mailto:alisofballet@gmail.com"> alisofballet@gmail.com</a> <br>
                 <a href="tel:+48534158883">tel. +48 534 158 883</a></strong>
                             </div>
                         </div>
@@ -480,7 +585,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/owl.mycarousel.js"></script>
-    <!-- <script src="js/jquery.mobile-1.4.5.min.js"></script> -->
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
 
 

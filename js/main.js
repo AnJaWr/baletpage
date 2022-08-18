@@ -1,12 +1,16 @@
 $(document).ready(function() {
     const preloader = document.querySelector('#preloader');
+    const mainwrapper = document.querySelector('#main_wrapper');
 
     preloader.classList.add('show-preloader');
 
     window.addEventListener('load', function() {
         setTimeout(function() {
             preloader.classList.remove('show-preloader');
-        }, 2000);
+        }, 3000);
+        setTimeout(function() {
+            mainwrapper.classList.remove('hide0nEnter');
+        }, 2500);
 
         setTimeout(function() {
             cookieConsent();
@@ -15,37 +19,47 @@ $(document).ready(function() {
     });
 
 
-    // const kadra_btn = document.getElementById("kadra_btn");
-    // const links = document.querySelectorAll(".page-header ul a");
+    $("#tabs").tabs();
+
     const kids_btn = document.getElementById("kids_btn");
     const adult_btn = document.getElementById("adult_btn");
     const balet_btn = document.getElementById("balet-btn");
     const barre_btn = document.getElementById("barre-btn");
     const stretching_btn = document.getElementById("stretching_btn");
 
-    const cennik_btn = document.getElementById("cennik-btn");
+    // const cennik_btn = document.getElementById("cennik-btn");
     const grafik_btn = document.getElementById("grafik-btn");
     const regulamin_btn = document.getElementById("regulamin-btn");
 
-    const close_btn = document.getElementById("close");
 
 
-    // kadra_btn.addEventListener("click", clickHandler);
     adult_btn.addEventListener("click", clickHandler);
     kids_btn.addEventListener("click", clickHandler);
     barre_btn.addEventListener("click", clickHandler);
     balet_btn.addEventListener("click", clickHandler);
     stretching_btn.addEventListener("click", clickHandler);
 
-    close_btn.addEventListener("click", closeHandler);
+
+    regulamin_btn.addEventListener("click", newTab);
+    grafik_btn.addEventListener("click", newTab);
+
 
     $(".section").hide();
+
+    $(".button-c").click(function() {
+        // Close all open windows
+        $(".cennik_section").stop().slideUp(300);
+        // Toggle this window open/close
+        $(this).next("cennik_section").stop().slideToggle(300);
+    });
+
+
 
     function clickHandler(e) {
         e.preventDefault();
         const href = this.getAttribute("href");
 
-        const showme = this.getAttribute("show");
+        const showme = this.getAttribute("showme");
         $(`#` + showme).show();
         const offsetTop = document.querySelector(href).offsetTop;
         scroll({
@@ -53,56 +67,49 @@ $(document).ready(function() {
             behavior: "smooth"
         });
 
-    }
+    };
 
-    function closeHandler(e) {
+    // =================toggle class cennik =============================================================
+
+    function newTab(e) {
+
         e.preventDefault();
         const href = this.getAttribute("href");
-        const close = this.getAttribute("close");
+        window.open(href, "_blank");
+        console.log(href)
+    }
 
-        const offsetTop = document.querySelector(href).offsetTop;
-        scroll({
-            top: offsetTop,
-            behavior: "smooth"
+
+    var buttonsX = document.querySelectorAll(".close");
+    console.log(buttonsX)
+
+    for (const btn of buttonsX) {
+        btn.addEventListener('click', function() {
+            console.log(this.value);
+
+
+            const href = this.getAttribute("href");
+            console.log(href)
+            const close = this.getAttribute("close");
+            console.log(close)
+
+            const offsetTop = document.querySelector(href).offsetTop;
+            scroll({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+            $(`#` + close).hide();
+            console.log(close)
         });
-        $(`#` + close).hide();
     }
 
-    const newTab = (a) => {
-        window.open(a, "_blank");
-    }
+
+
 
     $("#slider").owlCarousel();
 
-
-
-    // function deselect(e) {
-    //     $('.pop').slideFadeToggle(function() {
-    //         e.removeClass('selected');
-    //     });
-    // }
-
-    // $(function() {
-    //     $('#kadra_btn').on('click', function() {
-    //         if ($(this).hasClass('selected')) {
-    //             deselect($(this));
-    //         } else {
-    //             $(this).addClass('selected');
-    //             $('.pop').slideFadeToggle();
-    //         }
-    //         return false;
-    //     });
-
-    //     $('#close').on('click', function() {
-    //         deselect($('#kadra_btn'));
-    //         return false;
-    //     });
-    // });
-
-    // $.fn.slideFadeToggle = function(easing, callback) {
-    //     return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
-    // };
-
+    // =========================== modal popup ==========================
+    // modal popup code from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal.git
 
     const openModalButtons = document.querySelectorAll('[data-modal-target]')
     const closeModalButtons = document.querySelectorAll('[data-close-button]')
@@ -141,6 +148,23 @@ $(document).ready(function() {
         overlay.classList.remove('active')
     }
 
+    // reveal elements ========================
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
 
-    // modal popup code from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal.git
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+
 });
