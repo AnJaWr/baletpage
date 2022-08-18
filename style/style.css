@@ -699,6 +699,7 @@ h2 {
     /* height: 100vh; */
     display: flex;
     flex-wrap: wrap;
+    t
 }
 
 .button_container.adults {
@@ -771,6 +772,10 @@ li::before {
 
 #stretching {
     min-height: 100vh;
+}
+
+#baletforadult {
+    min-height: 110vh;
 }
 
 #barre {
@@ -1118,6 +1123,7 @@ footer {
     }
     .ballerina_2 {
         background-image: url(../img/IMG_1387_Original.jpeg);
+        width: 27%;
     }
     .ballerina_stretching {
         background-image: url(../img/stretching.jpg);
