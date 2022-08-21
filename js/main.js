@@ -46,6 +46,8 @@ $(document).ready(function() {
     const balet_btn = document.getElementById("balet-btn");
     const barre_btn = document.getElementById("barre-btn");
     const stretching_btn = document.getElementById("stretching_btn");
+    const balstretching_btn = document.getElementById("balstretching_btn");
+
 
     // const cennik_btn = document.getElementById("cennik-btn");
     const grafik_btn = document.getElementById("grafik-btn");
@@ -58,6 +60,7 @@ $(document).ready(function() {
     barre_btn.addEventListener("click", clickHandler);
     balet_btn.addEventListener("click", clickHandler);
     stretching_btn.addEventListener("click", clickHandler);
+    balstretching_btn.addEventListener("click", clickHandler);
 
 
     regulamin_btn.addEventListener("click", newTab);
@@ -186,5 +189,7 @@ $(document).ready(function() {
     }
 
     window.addEventListener("scroll", reveal);
+    // scroll at modals
+
 
 });

@@ -19,6 +19,8 @@
 
     <!-- ui -->
     <link rel="stylesheet" href="js/jquery-ui.min.css">
+    <!-- scroll -->
+    <link rel="stylesheet" href="style/jquery.mCustomScrollbar.min.css">
     <!-- my -->
 
     <link rel="stylesheet" href="style/style.css">
@@ -168,13 +170,13 @@
             <div class="logo_container">
                 <div class="logo"></div>
             </div>
-            <div id="zajecia_podzial">
+            <div id="zajecia_podzial" class="container_centered">
                 <div class="col reveal fade-right grow colRight img1" id="kids_btn" href="#kids" showme="kids">
 
-                    <div class="colTitle">Dla dzieci</div>
+                    <div class="colTitle">Zajęcia dla dzieci</div>
                 </div>
                 <div class="col reveal fade-left grow colLeft  bg img2" id="adult_btn" href="#adult" showme="adult">
-                    <div class="colTitle">Dla dorosłych</div>
+                    <div class="colTitle">Zajęcia dla dorosłych</div>
                 </div>
 
             </div>
@@ -192,9 +194,9 @@
 
 
         <!-- ============================ cennik ============================ -->
-        <div class="main_container_carousel akapit modal" id="cennik">
+        <div class="main_container_carousel akapit modal modal-cennik " id="cennik">
 
-            <div class="cennik_wrapper">
+            <div class="cennik_wrapper ">
                 <div id="tabs">
                     <ul>
                         <li><a href="#cennik_kids">Cennik - dzieci</a></li>
@@ -206,35 +208,37 @@
                     <div class="button" id="cennikA-btn" href="cennik_adults" showme="cennik_adults">Cennik - dorośli</div> -->
 
 
-                    <div class="cennik_section info_block " id="cennik_kids">
+                    <div class="cennik_section info_block scroll-custom" id="cennik_kids">
                         <h2> Cennik dzieci </h2>
 
                         <p> Zajęcia próbne 30 zł </p>
                         <p>Jednorazowe wejście 45 zł </p>
 
                         <h3>„Baby balerina” </h3>
-                        <p>3-4,5 lat (2 x 35min w tygodniu)</p>
+                        <p>3-4,5 lat (2 x 35 min w tygodniu)</p>
                         <p>Miesięczny koszt zajęć 250 zł </p>
 
                         <h3>„Arabeski”</h3>
-                        <p> 4,5-7 lat (2 x 55min w tygodniu)</p>
+                        <p> 4,5-7 lat (2 x 55 min w tygodniu)</p>
                         <p>Miesięczny koszt zajęć 350 zł </p>
 
                         <h3>„Łabędzie” 7-13 lat </h3>
-                        <p>(3 x 60min w tygodniu)</p>
+                        <p>(3 x 60 min w tygodniu)</p>
 
                         <p> Miesięczny koszt zajęć 500 zł </p>
+
                     </div>
 
 
 
-                    <div class="cennik_section info_block" id="cennik_adults">
+                    <div class="cennik_section info_block scroll-custom" id="cennik_adults">
                         <h2>Cennik dorośli</h2>
                         <p>Kameralne grupy 8 osób </p>
-                        <p>Próbne zajęcia 40 zł </p>
-                        <p>Jednorazowe wejście 60 zł </p>
+
 
                         <h3>Balet cennik </h3>
+                        <p>Próbne zajęcia 40 zł </p>
+                        <p>Jednorazowe wejście 60 zł </p>
                         <p>Karnet 4 zajęcia 240 zł </p>
                         <p>Karnet 8 zajęć 450 zł</p>
 
@@ -244,6 +248,17 @@
                         <p> Karnet 4 zajęcia 185 zł </p>
                         <p> Karnet 8 zajęć 350 zł </p>
 
+                        <h3>Stretching cennik</h3>
+                        <p>Próbne zajęcia ??? zł </p>
+                        <p>Jednorazowe wejście ??? zł</p>
+                        <p> Karnet 4 zajęcia ??? zł </p>
+                        <p> Karnet 8 zajęć ??? zł </p>
+
+                        <h3>Balet + stretching cennik</h3>
+                        <p>Próbne zajęcia ??? zł </p>
+                        <p>Jednorazowe wejście ??? zł</p>
+                        <p> Karnet 4 zajęcia ??? zł </p>
+                        <p> Karnet 8 zajęć ??? zł </p>
 
                     </div>
                 </div>
@@ -251,7 +266,7 @@
 
 
             </div>
-            <div class="button_container screen_visible" id="close" style="margin-bottom:25px; margin-top:25px">
+            <div class="cennik button_container screen_visible" id="close" style="margin-bottom:25px; margin-top:25px">
                 <button data-close-button class="close-button">
                  
                         <img src="img/pointy.png" style="width: 80px; height: 80px;" /></button>
@@ -360,11 +375,11 @@
                 <div class="adult_activities" id="barre-btn" href="#barre" showme="barre">
                     <div class="colTitle">Barre</div>
                 </div>
-                <div class="adult_activities" id="stretching_btn" href="#stretching" showme="stretching">
-                    <div class="colTitle">Stretching</div>
+                <div class="adult_activities" id="stretching_btn" href="#balletstretching" showme="balletstretching">
+                    <div class="colTitle">Balet + Stretching</div>
                 </div>
-                <div class="adult_activities" id="balstretching_btn" href="#stretching" showme="balstretching">
-                    <div class="colTitle">Balet + stretching</div>
+                <div class="adult_activities" id="balstretching_btn" href="#stretching" showme="stretching">
+                    <div class="colTitle">Stretching</div>
                 </div>
 
             </div>
@@ -440,16 +455,15 @@
         </div>
         <!-- </div> -->
         <div class="div_wrapper section" id="barre">
-            <div class="block-d block">
+            <div class="screen_visible ballerina-img ballerina_3"></div>
+            <div class="mobile_visible ballerina_3-mobile"></div>
+            <div class="adult-d block">
                 <h3>BARRE - intensywny trening, pełen gracji i kobiecości</h3>
                 <p class="block-d">To mieszanka ćwiczeń i różnych technik zainspirowany baletem w połączeniu z jogą, fitnessem i pilatesem – wszystko to gra w jednej harmonijnie zbudowanej lekcji.</p>
                 <p class="block-d">Słowo "barre" z angielskiego oznacza drążek baletowy – jest on potrzebny do wykonania większości ćwiczeń. Trening BARRE jest jedną z najpopularniejszych form sportu kobiecego w Nowym Jorku i Los Angeles. </p>
                 <p class="block-d">Zestawy siłowe, cardio, elementy jogi, baletu, pilatesu i rozciągania - wywołają nowe odczucia w ciele. Podczas treningu ćwiczymy wszystkie grupy mięśni bez wyjątku. Celem BARRE jest przede wszystkim ukształtowanie zgrabnych pośladków
                     i odchudzenie ud, czyli kwestie, na których wielu kobietom szczególnie zależy. Rozciąganie pod koniec każdej lekcji utrwali wzmocnienie i pomoże złagodzić napięcie, poczuć lekkość ciała i przyjemne zmęczenie. To jest energochłonny
                     trening, który pozwoli Ci pozbyć się zbędnych kilogramów. </p>
-            </div>
-
-            <div class="block-d block">
 
                 <h5>ILE KALORII MOŻNA ŚREDNIO SPALIĆ PODCZAS JEDNEGO TRENINGU? </h5>
                 <p class="block-d">
@@ -478,16 +492,16 @@
                 <a href="#adult" class="close" close="barre"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
             </div>
         </div>
-        <!-- stretching -->
+        <!-- stretching  + ballet -->
 
-        <div class="div_wrapper section" id="stretching">
+        <div class="div_wrapper section" id="balletstretching">
             <div class="block-d block">
                 <h3>Połączenie baletu i stretchingu </h3>
                 <p class="block-d">To nowe spojrzenie na zajęcia tanecznie i rozciągające: zastąpiliśmy tradycyjną rozgrzewkę baletowymi ćwiczeniami przy drążku. </p>
 
                 <p class="block-d">Łączenie tych dwóch kierunków przynosi ogromną korzyść dla duszy i ciała. Dlaczego? Podczas ćwiczeń baletowych mocno rozgrzewają się mięśnie, co pozwala od razu bezpiecznie przejść do rozciągania.
                 </p>
-                <p class="block-d">Podczas treningu skupiamy się na czystym klasycznym balecie, czyli wykonujemy ćwiczenia przy drążku, które : </p>
+                <p class="block-d">Podczas treningu skupiamy się na czystym klasycznym balecie, czyli wykonujemy ćwiczenia przy drążku, które: </p>
                 <ul>
                     <li class="nolist"> wysmuklają i wydłużają mięśnie </li>
                     <li class="nolist">wspaniale kształtują sylwetkę</li>
@@ -503,8 +517,73 @@
 
                 <p class="block-d">Zajęcia trwają półtory godziny, przeznaczone są dla wszystkich, niezależnie od wieku i poziomu sprawności, nie jest wymagane doświadczenie w tańcu. </p>
             </div>
-            <div class="screen_visible ballerina-img ballerina_stretching"></div>
-            <div class="mobile_visible ballerina_stretching-mobile"></div>
+            <div class="screen_visible ballerina-img ballerina_stretching2"></div>
+            <div class="mobile_visible ballerina_stretching2-mobile"></div>
+
+
+
+            <div class="button_container screen_visible" style="margin-bottom:25px; margin-top:25px">
+                <a href="#adult" class="close" close="stretching"><img src="img/pointy.png" style="width: 80px; height: 80px;" /></a>
+            </div>
+
+
+            <div class="button_container mobile_visible" style="margin-bottom:50px">
+                <a href="#adult" class="close" close="stretching"><img src="img/pointy.png" style="width: 50px; height: 50px;" /></a>
+            </div>
+        </div>
+
+        <!-- stretching  -->
+
+        <div class="div_wrapper section" id="stretching">
+            <div class="screen_visible ballerina-img ballerina_stretching3"></div>
+            <div class="mobile_visible ballerina_stretching3-mobile"></div>
+            <div class="block-d block">
+
+                <h3>Stretching w studio ALISOFballet </h3>
+                <p class="block-d">Stretching to nic innego jak rozciąganie. Jest to cały zestaw specjalnych ćwiczeń i technik mających na celu poprawę elastyczności oraz rozwój wysokiej mobilności w stawach. Ćwiczenia te są wskazane dla każdego - niezależnie od wieku i
+                    stopnia jego elastyczności. </p>
+
+
+                <p class="block-d">
+                    Pracujemy różnymi metodami:
+                </p>
+                <ul>
+                    <li>stretching aktywny, czyli dynamiczny</li>
+                    <li> stretching pasywny, związany z wykonywaniem ćwiczeń oddechowych i rozluźniających, polegający na trzymaniu przez określony czas podanych pozycji - ta metoda dobrze sprawdzi się dla osób początkujących. </li>
+                </ul>
+                <br><br>
+
+                <p class="block-d">
+                    Naszym zadaniem jest pomóc każdej kobiecie poczuć się wyjątkowo, rozwinąć elastyczność i uzyskać funkcjonalną mobilność całego ciała, zwiększyć zakres ruchu stawów oraz siłę mięśni.
+                </p>
+                <h5>Przydatne wskazówki </h5>
+                <p class="block-d">
+                    Żeby osiągnąć naprawdę świetne rezultaty musisz być cierpliwą i systematycznie uczęszczać na zajęcia.</p>
+
+
+
+
+                <p class="block-d">
+
+
+                    Musisz słuchać swojego ciała i obserwować je, wykonując obustronnie pozycje rozciągające.
+
+
+
+                    <p class="block-d">
+
+                        Nie możesz robić żadnych ćwiczeń na siłę, zawsze zwracaj uwagę na spokojne oddychanie.
+                    </p>
+                    <p class="block-d">
+                        Prawidłowy stretching rozpoczyna się od rozgrzewki.
+                    </p>
+                    <p class="block-d">
+                        Zacznij swoją przygodę z rozciąganiem w studio ALISOFballet. Naszi trenerzy to profesjonaliści, którzy pomogą Wam spełnić Wasze marzenia i zadbać o zdrowie bez kontuzji i bez bólu. </p>
+                    <h5> JAK SIĘ UBRAĆ NA TAKI TRENING? </h5>
+                    <p class="block-d">Załóż wygodne rozciągliwe ubrania - strój sportowy i skarpetki. Nie musisz zabierać ze sobą butów sportowych. </p>
+
+            </div>
+
 
 
 
@@ -586,6 +665,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/owl.mycarousel.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>
 
 

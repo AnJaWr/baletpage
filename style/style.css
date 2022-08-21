@@ -400,7 +400,7 @@ h2 {
 
 #kadra {
     background-color: #f5e1e1;
-    width: 45%;
+    width: 96%;
     min-height: 85vh;
 }
 
@@ -497,6 +497,10 @@ h2 {
     position: relative;
 }
 
+.owl-item {
+    width: 90vw;
+}
+
 .owl-carousel .nav-btn {
     height: 47px;
     position: absolute;
@@ -580,11 +584,13 @@ h2 {
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
     pointer-events: none;
+    overflow: hidden;
 }
 
 #overlay.active {
     opacity: 1;
     pointer-events: all;
+    z-index: 50;
 }
 
 
@@ -599,15 +605,58 @@ h2 {
 
 .cennik_section {
     display: none;
-    position: absolute;
+    /* position: absolute; */
+    max-height: fit-content;
 }
 
-.info_block {
-    width: 80%;
+.cennik_section.info_block.scroll-custom {
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-color: pink #f8d0d0;
+    ;
+    scrollbar-width: thin;
 }
 
-.cennik.button_container {
-    display: inline
+.scroll-custom::-webkit-scrollbar {
+    width: 20px;
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-image: linear-gradient(180deg, #f55b81 0%, #fad6d6 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+
+
+/* .cennik.button_container {
+    display: inline;
+} */
+
+#cennik {
+    background-color: #fdf0f0;
+}
+
+#cennik_kids>h2,
+#cennik_adults>h2 {
+    text-align: center;
+}
+
+#cennik_kids>p,
+#cennik_adults>p {
+    margin-bottom: 12px;
+}
+
+#cennik_kids>h3,
+#cennik_adults>h3 {
+    background-color: #fad6d6;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 
@@ -772,6 +821,11 @@ li::before {
     min-height: 110vh;
 }
 
+#stretching,
+#balletstretching {
+    height: 100vh;
+}
+
 #barre {
     background-image: url(../img/barre.jpg);
     background-position: center;
@@ -820,6 +874,17 @@ h5 {
     padding: 10px; */
 }
 
+.ballerina_3-mobile {
+    background-image: url(../img/barre2.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 70vh;
+    /* margin: 15px 5px;
+    padding: 10px; */
+}
+
 
 /* ==========================kontakt ========= */
 
@@ -837,7 +902,7 @@ h5 {
 
 .contact-box {
     width: clamp(100px, 90%, 1000px);
-    margin: 80px 50px;
+    margin: 80px 25px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -979,7 +1044,7 @@ textarea:valid+label {
 
 @media only screen and (max-width: 400px) {
     h2 {
-        font-size: clamp(18px, 8vw, 60px);
+        font-size: clamp(15px, 8vw, 20px);
     }
     .links {
         padding-top: 30px;
@@ -1080,11 +1145,14 @@ footer {
         font-size: 2rem;
     }
     #zajecia_podzial {
-        margin: 0px 0px;
-        margin-left: 10%;
-        width: 100vw;
+        margin-top: 0px;
+        margin-bottom: 0px;
         height: 75%;
         overflow: visible;
+    }
+    .container_centered {
+        display: flex;
+        justify-content: center;
     }
     .logo_container {
         height: 10%;
@@ -1110,7 +1178,7 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         width: 33%;
-        /* height: 80%; */
+        height: 80%;
         margin-top: 45px;
         margin-left: 25px;
         padding: 10px;
@@ -1122,6 +1190,42 @@ footer {
     }
     .ballerina_stretching {
         background-image: url(../img/stretching.jpg);
+        width: 25%;
+        background-position: bottom;
+    }
+    .ballerina_stretching2 {
+        background-image: url(../img/stretching2.jpg);
+        width: 25%;
+        background-position: bottom;
+    }
+    .ballerina_stretching2-mobile {
+        background-image: url(../img/stretching2.jpg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        min-height: 70vh;
+        margin: 5px;
+        padding: 10px;
+    }
+    .ballerina_stretching3 {
+        background-image: url(../img/stretching1.jpg);
+        width: 25%;
+        background-position: bottom;
+    }
+    .ballerina_stretching3-mobile {
+        background-image: url(../img/stretching1.jpg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        min-height: 70vh;
+        margin: 5px;
+        padding: 10px;
+    }
+    .ballerina_3 {
+        background-image: url(../img/barre2.jpg);
+        width: 27%;
     }
     #stretching>.block,
     .kids-d.block,
@@ -1143,6 +1247,11 @@ footer {
         cursor: pointer;
         background-color: rgba(255, 255, 255, 0.362);
         transition: 0.8s;
+    }
+    #kadra {
+        background-color: #f5e1e1;
+        width: 45%;
+        min-height: 85vh;
     }
     #about {
         justify-content: space-evenly;
@@ -1169,10 +1278,13 @@ footer {
         transform: translate(-50%, -50%) scale(0);
         transition: 200ms ease-in-out;
         border-radius: 10px;
-        z-index: 50;
+        z-index: 10000;
         background-color: #ebebeb;
         width: 45%;
         max-width: 80%;
+    }
+    .modal-cennik {
+        width: 35%;
     }
     .adult_activities {
         height: 75vh;
