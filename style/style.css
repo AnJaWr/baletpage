@@ -1240,8 +1240,11 @@ footer {
 
     }
     #kadra_btn {
+        margin-top: 25px;
         width: 25%;
         font-size: 1.3rem;
+        background-color: #f3b3b3;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
     }
     #kadra_btn:hover {
         cursor: pointer;
@@ -1255,6 +1258,7 @@ footer {
     }
     #about {
         justify-content: space-evenly;
+        align-items: center;
     }
     .block {
         width: 30%;
