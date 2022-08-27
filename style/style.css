@@ -204,26 +204,34 @@ figure {
 .menu {
     justify-content: center;
     width: 100%;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     padding: 10px;
     display: flex;
+    background-color: rgba(153, 153, 153, 0.192);
 }
 
 #home>.menu {
     align-self: flex-end;
 }
 
-.menu li {
-    display: inline;
-    text-decoration: none;
+.menu-list {
     text-transform: uppercase;
+    text-align: center;
     justify-self: center;
     font-family: 'Ibarra Real Nova', serif;
+    width: 23%;
+    padding: 5px;
 }
 
-.menu li::before {
+
+/* .menu-list.four {
+    color: #777
+} */
+
+
+/* .menu li::before {
     content: "";
-}
+} */
 
 #about p {
     margin-bottom: 15px;
@@ -244,14 +252,14 @@ h1 {
 h3,
 h2 {
     font-family: 'Ibarra Real Nova', serif;
-    padding-bottom: 7px
+    padding-bottom: 7px;
 }
 
 
 /* news */
 
 #news {
-    background-image: url(../img/4S7A2415.JPG);
+    background-image: url(/img/4S7A2415.JPG);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -268,7 +276,7 @@ h2 {
     background-color: rgba(255, 244, 244, 0.658);
     margin: 20px;
     padding: 30px;
-    border: 2px solid rgb(231, 133, 133);
+    border: 1px solid rgb(231, 133, 133);
     border-radius: 25px;
     text-align: justify;
 }
@@ -276,14 +284,32 @@ h2 {
 #news>.owl-dots>.owl-dot span {
     width: 50px;
     height: 50px;
-    /* background-color: #ff8ba8; */
 }
 
-#news>.owl-dots {
-    background-color: rgba(255, 244, 244, 0.322);
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background-color: transparent;
 }
 
-#news>.owl-dots>.owl-dot span
+@keyframes pulse {
+    from,
+    to {
+        transform: scale3d(1, 1, 1)
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05)
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 2.0s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+
 /* zajecia */
 
 #zajecia_podzial {
@@ -555,7 +581,8 @@ h2 {
     opacity: 0.2;
 }
 
-.owl-carousel .prev-slide {
+
+/* .owl-carousel .prev-slide {
     background: url(/img/l-arrow.png) no-repeat scroll 0 0;
     left: -33px;
 }
@@ -563,7 +590,7 @@ h2 {
 .owl-carousel .next-slide {
     background: url(/img/r-arrow.png) no-repeat scroll -24px 0px;
     right: -33px;
-}
+} */
 
 .owl-carousel .prev-slide:hover {
     background-position: 0px -53px;
