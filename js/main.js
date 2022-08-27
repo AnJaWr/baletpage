@@ -83,7 +83,8 @@ $(document).ready(function() {
         const href = this.getAttribute("href");
 
         const showme = this.getAttribute("showme");
-        $(`#` + showme).show();
+        $('.section').hide();
+        $(`#` + showme).fadeIn("slow")
         const offsetTop = document.querySelector(href).offsetTop;
         scroll({
             top: offsetTop,

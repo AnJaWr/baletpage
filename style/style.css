@@ -552,7 +552,7 @@ h2 {
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     border-radius: 10px;
-    z-index: 50;
+    z-index: 10000;
     background-color: #ebebeb;
     width: 96%;
 }
@@ -695,6 +695,20 @@ h2 {
     background-color: #f3bbbb;
 }
 
+.adult_one {
+    margin-top: 25px;
+}
+
+.adult_three {
+    margin-bottom: 25px;
+}
+
+.adult_one,
+.adult_two,
+.adult_three {
+    padding: 10px
+}
+
 .littlebalerina_1 {
     background-image: url(../img/4S7A3742.jpg);
     background-size: cover;
@@ -775,11 +789,11 @@ h2 {
 }
 
 #stretching_btn {
-    background-image: url(../img/bg_adult.jpg);
+    background-image: url(../img/stretching.jpg);
 }
 
 #balstretching_btn {
-    background-image: url(../img/stretching.jpg);
+    background-image: url(../img/foradultblue.jpg);
 }
 
 #balet-btn {
@@ -813,26 +827,19 @@ li::before {
     margin-left: 1em;
 }
 
-#stretching {
-    min-height: 100vh;
-}
-
 #baletforadult {
     min-height: 110vh;
 }
 
+#ballet_adult,
+#barre,
 #stretching,
-#balletstretching {
-    height: 100vh;
+#balstr {
+    min-height: 100vh;
 }
 
 #barre {
-    background-image: url(../img/barre.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    align-items: center;
+    background-color: #e9d6d6;
 }
 
 h5 {
@@ -1100,6 +1107,13 @@ footer {
     }
     #home>.menu {
         font-size: 2rem;
+    }
+    .menu_item {
+        transition: 0.8s;
+    }
+    .menu_item:hover {
+        color: #e4e4e4;
+        text-shadow: 1px 1px 3px #131313;
     }
     h1 {
         font-size: 2rem;
