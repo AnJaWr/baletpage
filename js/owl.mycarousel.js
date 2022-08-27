@@ -27,7 +27,7 @@ $(document).ready(function() {
     $("#news").owlCarousel({
         items: 3,
         nav: true,
-        navText: ["<img src='../img/prev.svg' style='width :50px; height:50px'>", "<img src='../img/next.svg' style='width :50px; height:50px'>"],
+        navText: ["<img src='../img/prev.svg' class='fa-arrow-left' style='width :50px; height:50px; margin-right:20px'>", "<img src='../img/next.svg' class='fa-arrow-right' style='width :50px; height:50px;  margin-left:20px '>"],
         dots: false,
         responsive: {
             0: {
