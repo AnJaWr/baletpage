@@ -247,6 +247,45 @@ h2 {
     padding-bottom: 7px
 }
 
+
+/* news */
+
+#news {
+    background-image: url(/img/4S7A2415.JPG);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 100vh;
+    width: 100%;
+    /* overflow-y: auto;
+    scrollbar-color: pink #f8d0d0;
+    ;
+    scrollbar-width: thin; */
+}
+
+.news-item {
+    min-height: 50vh;
+    background-color: rgba(255, 244, 244, 0.658);
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid rgb(231, 133, 133);
+    border-radius: 25px;
+    text-align: justify;
+}
+
+#news>.owl-dots>.owl-dot span {
+    width: 50px;
+    height: 50px;
+    /* background-color: #ff8ba8; */
+}
+
+#news>.owl-dots {
+    background-color: rgba(255, 244, 244, 0.322);
+}
+
+#news>.owl-dots>.owl-dot span
+/* zajecia */
+
 #zajecia_podzial {
     margin: 35px auto;
     width: 100%;
@@ -493,6 +532,7 @@ h2 {
     margin-left: -1em;
 }
 
+#news,
 #slider {
     position: relative;
 }

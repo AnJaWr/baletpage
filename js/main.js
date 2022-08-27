@@ -19,25 +19,6 @@ $(document).ready(function() {
 
 
 
-    // const preloader = document.querySelector('#preloader');
-    // const mainwrapper = document.querySelector('#main_wrapper');
-
-    // preloader.classList.add('show-preloader');
-
-    // window.addEventListener('load', function() {
-    //     setTimeout(function() {
-    //         preloader.classList.remove('show-preloader');
-    //     }, 3000);
-    //     setTimeout(function() {
-    //         mainwrapper.classList.remove('hide0nEnter');
-    //     }, 2500);
-
-    //     setTimeout(function() {
-    //         cookieConsent();
-    //     }, 2550);
-
-    // });
-
 
     $("#tabs").tabs();
 
@@ -127,10 +108,11 @@ $(document).ready(function() {
         });
     }
 
-
+    // ============================ slider   ==============================
 
 
     $("#slider").owlCarousel();
+    $("#news").owlCarousel();
 
     // =========================== modal popup ==========================
     // modal popup code from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal.git
