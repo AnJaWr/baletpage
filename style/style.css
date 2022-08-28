@@ -944,6 +944,79 @@ h2 {
 }
 
 
+/* kids popup */
+
+.button_container-pop {
+    display: inline-block;
+    position: relative;
+}
+
+.my_button-pop {
+    padding: 1em;
+    background-color: #f3b3b3;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.my_button-pop:hover {
+    background-color: #e47fa9;
+}
+
+.my_target-pop {
+    background-color: #f3f3f3;
+    padding: 2em;
+    border: 1px solid #e5e5e5;
+    width: 90vw;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 6vh;
+    left: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.my_target-pop:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    border-top: 12px solid #f3f3f3;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: none;
+}
+
+.button_container-pop.active .my_target-pop {
+    display: block;
+}
+
+.close_button-pop {
+    background-color: #000;
+    color: #fff;
+    padding: 0.4em 0.5em;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0.4em;
+    right: 0.4em;
+    font-size: 0.8em;
+    line-height: 100%;
+    opacity: 0.5;
+    border-radius: 0.2em;
+}
+
+.close_button-pop:hover {
+    opacity: 1.0;
+}
+
+
 /*======================================section adult ===========================================*/
 
 #adult {
@@ -1379,6 +1452,9 @@ footer {
         margin-bottom: 0px;
         height: 75vh;
         overflow: visible;
+    }
+    .my_target-pop {
+        width: 30vw;
     }
     .container_centered {
         display: flex;

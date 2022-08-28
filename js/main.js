@@ -175,4 +175,22 @@ $(document).ready(function() {
     // scroll at modals
 
 
+    // tooltip kids
+    var tooltips = document.getElementsByClassName('button_container-pop');
+    console.log(tooltips)
+
+    for (const tooltip of tooltips) {
+
+        tooltip.addEventListener('click', function() {
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+            } else {
+                this.classList.add('active');
+            }
+
+        });
+
+    }
+
+
 });
