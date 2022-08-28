@@ -665,6 +665,7 @@ h2 {
     margin: 0px 25px 25px;
 }
 
+.block>ul,
 .member_description>ul {
     margin-left: 20px;
     list-style: none;
@@ -1089,6 +1090,30 @@ h5 {
     padding: 10px; */
 }
 
+.ballerina_stretching2-mobile {
+    background-image: url(../img/stretching2.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 70vh;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.ballerina_stretching3-mobile {
+    background-image: url(../img/stretching1.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 70vh;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+}
+
 
 /* ==========================kontakt ========= */
 
@@ -1346,12 +1371,6 @@ footer {
         min-width: 30vw;
         margin: 25px;
     }
-    .screen_visible {
-        display: flex;
-    }
-    .mobile_visible {
-        display: none;
-    }
     .colTitle {
         font-size: 2rem;
     }
@@ -1389,7 +1408,7 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         width: 33%;
-        height: 80%;
+        min-height: 80vh;
         margin-top: 45px;
         margin-left: 25px;
         padding: 10px;
@@ -1409,30 +1428,10 @@ footer {
         width: 25%;
         background-position: bottom;
     }
-    .ballerina_stretching2-mobile {
-        background-image: url(../img/stretching2.jpg);
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100vw;
-        min-height: 70vh;
-        margin: 5px;
-        padding: 10px;
-    }
     .ballerina_stretching3 {
         background-image: url(../img/stretching1.jpg);
         width: 25%;
         background-position: bottom;
-    }
-    .ballerina_stretching3-mobile {
-        background-image: url(../img/stretching1.jpg);
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100vw;
-        min-height: 70vh;
-        margin: 5px;
-        padding: 10px;
     }
     .ballerina_3 {
         background-image: url(../img/barre2.jpg);
@@ -1504,6 +1503,12 @@ footer {
     .adult_activities {
         height: 75vh;
         width: 25%;
+    }
+    .screen_visible {
+        display: flex;
+    }
+    .mobile_visible {
+        display: none;
     }
 }
 
