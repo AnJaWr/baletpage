@@ -957,12 +957,15 @@ h2 {
     display: inline-block;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-43%);
+    transition: 0.7s;
     cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Ibarra Real Nova', serif;
 }
 
 .my_button-pop:hover {
-    background-color: #e47fa9;
+    background-color: #f0f0f0;
 }
 
 .my_target-pop {
