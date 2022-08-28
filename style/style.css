@@ -446,9 +446,8 @@ h2 {
 #zajecia_podzial {
     margin: 35px auto;
     width: 100%;
-    height: 65%;
+    height: 65vh;
     max-width: 1200px;
-    /* height: 35vh; */
     overflow: hidden;
 }
 
@@ -1359,7 +1358,7 @@ footer {
     #zajecia_podzial {
         margin-top: 0px;
         margin-bottom: 0px;
-        height: 75%;
+        height: 75vh;
         overflow: visible;
     }
     .container_centered {
