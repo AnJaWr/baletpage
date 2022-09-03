@@ -10,8 +10,6 @@
     -webkit-tap-highlight-color: transparent
 }
 
-.owl-theme .owl-nav {}
-
 .owl-theme .owl-nav [class*=owl-] {
     color: #FFF;
     font-size: 14px;
@@ -33,8 +31,6 @@
     opacity: .5;
     cursor: default
 }
-
-.owl-theme .owl-nav.disabled+.owl-dots {}
 
 .owl-theme .owl-dots .owl-dot {
     display: inline-block;
