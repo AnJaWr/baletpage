@@ -1058,7 +1058,7 @@ h2 {
 }
 
 #balet-btn {
-    background-image: url(../img/adballet.jpeg);
+    background-image: url(../img/foradultpink.jpg);
 }
 
 #barre-btn {
@@ -1070,12 +1070,13 @@ h2 {
 }
 
 #balstretching_btn {
-    background-image: url(../img/foradultblue.jpg);
-}
-
-#balet-btn {
     background-image: url(../img/adballet.jpeg);
 }
+
+
+/* #balet-btn {
+    background-image: url(../img/adballet.jpeg);
+} */
 
 #balet-btn,
 #barre-btn,
