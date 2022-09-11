@@ -1152,7 +1152,7 @@ h5 {
     background-image: url(../img/IMG_1387_Original.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 100vw;
     min-height: 70vh;
     /* margin: 15px 5px;
