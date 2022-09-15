@@ -1372,7 +1372,17 @@ footer {
     padding: 20px;
     height: 6vh;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+}
+
+.coded-div {
+    width: 50%;
+    text-align: right;
+}
+
+.priv-div {
+    width: 50%;
+    text-align: right;
 }
 
 
